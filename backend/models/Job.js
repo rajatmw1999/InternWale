@@ -1,46 +1,30 @@
 const mongoose = require("mongoose");
-const mongoose = require("mongoose");
 
-const Roadmap_Data = new mongoose.Schema({
-  NameOfRoadmap: {
+const job_Data = new mongoose.Schema({
+  Title: {
     type: String,
   },
-  NameofAuthor: {
-    type: String,
-  },
-  DatePublished: {
-    type: Date,
-  },
-  Likes: {
-    type: Number,
-  },
-  ImageLink: {
+  Location: {
     type: String,
   },
   Category: {
     type: String,
   },
-  Tags: [
-    {
-      type: String,
-    },
-  ],
-  Text: {
+  DatePosted: {
+    type: Date,
+  },
+  Company: {
     type: String,
   },
-  Timeline: [
-    {
-      name: {
-        type: String,
-      },
-      desc: {
-        type: String,
-      },
-      time: {
-        type: Number,
-      },
-    },
-  ],
+  LinktoJobPost: {
+    type: String,
+  },
+  JobId: {
+    type: String,
+  },
+  Description: {
+    type: String,
+  },
 });
 
-module.exports = RoadmapData = mongoose.model("RoadmapData", Roadmap_Data);
+module.exports = JobData = mongoose.model("JobData", job_Data);
