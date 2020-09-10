@@ -1,0 +1,219 @@
+.vanshika-jc-card{
+	width: 64%;
+	height: 20%;
+}
+.vanshika-jc-img{
+  float: left;
+  margin: 0 1% 1% 0;
+  height: 70px;
+  width: 70px;
+}
+.card{
+	padding: 1%;
+	margin: 1%;
+}
+.vanshika-jc-head{
+	margin-left: 2%;
+	text-align: left;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+.vanshika-jc-company{
+	margin-bottom: 0;
+	color: rgba(99,99,99,1);
+}
+.vanshika-jc-post{
+	margin-bottom: 0;
+	font-size: 1.3rem;
+}
+.vanshika-jc-place{
+	margin-bottom: 0;
+	color: rgba(99,99,99,1);
+	font-weight: 500;
+}
+.vanshika-jc-time{
+	float: right;
+	color: rgba(111,111,111,1);
+}
+.vanshika-jc-labels{
+	margin-top: 1%;
+	margin-left: 6.7%;
+}
+#Icon_metro-dollar2 {
+	fill: rgba(13,198,0,1);
+}
+.Icon_metro-dollar2 {
+	width: 16.062px;
+	height: 30.849px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Icon_ionic-md-briefcase {
+	fill: rgba(118,56,56,1);
+}
+.Icon_ionic-md-briefcase {
+	width: 29px;
+	height: 27px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Icon_ionic-md-time {
+	width: 29px;
+	height: 29px;
+}
+#Path_9 {
+	fill: rgba(255,179,0,1);
+}
+.Path_9 {
+	overflow: visible;
+	position: absolute;
+	width: 29.25px;
+	height: 29.25px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Path_10 {
+	fill: rgba(255,179,0,1);
+}
+.Path_10 {
+	overflow: visible;
+	position: absolute;
+	width: 8.775px;
+	height: 13.38px;
+	left: 13.163px;
+	top: 7.313px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.vanshika-jc-labeltext{
+	font-family: Poppins;
+	font-weight: bold;
+	font-size: 1.3rem;
+	color: rgba(99,99,99,1);
+}
+.vanshika-jc-fulltime{
+	position: absolute;
+	left: 35px;
+}
+.vanshika-jc-badge{
+	margin-top: 1%;
+	background-color: rgba(241,64,0,1);
+	margin-left: 7.8%;
+	border-radius: 10px;
+	padding: 0.7%;
+	width: 25%;
+}
+#Icon_material-verified-user {
+	fill: rgba(255,255,255,1);
+}
+.Icon_material-verified-user {
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 15px;
+	height: 20px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.vanshika-jc-content{
+	margin-left: 6%;
+	margin-top: 1%;
+}
+.vanshika-jc-applicants{
+	vertical-align: bottom; 
+}
+#Icon_awesome-user-tie {
+	fill: rgba(39,39,39,1);
+}
+.Icon_awesome-user-tie {
+	width: 31.5px;
+	height: 36px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.vanshika-jc-submit{
+	float: right;
+}
+.vanshika-jc-apply{
+	font-family: Poppins;
+	font-weight: normal;
+	font-size: 0.8rem;
+	border-style: none;
+	background-image: linear-gradient(to bottom, #0a037e, #2828f2);
+}
+.vanshika-jc-save{
+	font-family: Poppins;
+	font-weight: normal;
+	font-size: 0.8rem;
+	background-color: white;
+	color: rgba(25,17,140,1);
+	border-color:rgba(25,17,140,1);
+}
+@media (max-width:1030px){
+	.vanshika-jc-card{
+		width: 85%;
+		height: 15%;
+	}
+}
+@media (max-width:800px) {
+	.vanshika-jc-card{
+		width: 85%;
+		height: 15%;
+	}
+	.vanshika-jc-labels{
+		margin-left: 0;
+	}
+	.vanshika-jc-content{
+		display: none;
+	}
+	.vanshika-jc-badge{
+		margin-left: 2%;
+		width: 40%;
+		margin-bottom: 1%;
+	}
+}
+@media (max-width:500px) {
+	.vanshika-jc-card{
+		width: 90%;
+		height: 15%;
+	}
+	.vanshika-jc-content{
+		display: none;
+	}
+	.vanshika-jc-labeltext{
+		font-size: 0.8rem;
+	}
+	.vanshika-jc-fulltime{
+		top: 5px;
+		left: 24px;
+	}
+	.vanshika-jc-badge{
+		margin-left: 2%;
+		width: 50%;
+		margin-bottom: 1%;
+	}
+	.vanshika-jc-post,.vanshika-jc-badge,.vanshika-jc-applicants,.vanshika-jc-head,.vanshika-jc-apply,.vanshika-jc-save {
+		font-size: 0.8rem;
+	}
+	.vanshika-jc-img{
+		height: 50px;
+		width: 50px;
+	}
+	.Icon_metro-dollar2, .Icon_ionic-md-briefcase{
+		height: 15px; 
+		width: 15px;
+	}
+	.Path_10{
+		height: 12px; 
+		width: 15px;
+		left: 5.163px;
+		top: 5.313px;
+	}
+	.Path_9{
+		top: 4px;
+		height: 20px; 
+		width: 20px;
+
+	}
+	.Icon_awesome-user-tie{
+		height: 20px;
+		width: 18px;
+	}
+}
