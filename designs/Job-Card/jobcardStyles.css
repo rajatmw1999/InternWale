@@ -9,6 +9,7 @@
   width: 70px;
 }
 .card{
+	display: inline-block;
 	padding: 1%;
 	margin: 1%;
 }
