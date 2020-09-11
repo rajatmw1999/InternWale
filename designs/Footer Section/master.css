@@ -4,7 +4,7 @@
   height: 274px;
   left: 1138px;
 
-  overflow: visible;
+  overflow: none;
 }
 #METADATA {
   display: none;
@@ -21,10 +21,10 @@
   font-size: 3px;
 }
 #Service_STYLESTYLE3TAGUI_L {
-  left: 262px;
+  left: -38px;
   top: 250px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 79px;
   white-space: nowrap;
   text-align: center;
@@ -35,10 +35,10 @@
   color: rgba(25,21,184,1);
 }
 #Service_STYLESTYLE3TAGUI_L_r {
-  left: 262px;
+  left: -38px;
   top: 194px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 79px;
   white-space: nowrap;
   text-align: center;
@@ -49,10 +49,10 @@
   color: rgba(25,21,184,1);
 }
 #Service_STYLESTYLE3TAGUI_L_s {
-  left: 262px;
+  left: -38px;
   top: 137px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 79px;
   white-space: nowrap;
   text-align: center;
@@ -63,10 +63,10 @@
   color: rgba(25,21,184,1);
 }
 #Service_STYLESTYLE3TAGUI_L_t {
-  left: 262px;
+  left: -38px;
   top: 81px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 79px;
   white-space: nowrap;
   text-align: center;
@@ -77,10 +77,10 @@
   color: rgba(25,21,184,1);
 }
 #Services_STYLESTYLE3TAGH5 {
-  left: 268px;
+  left: -38px;
   top: 0px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 99px;
   white-space: nowrap;
   line-height: 34px;
@@ -93,10 +93,10 @@
   color: rgba(25,21,184,1);
 }
 #Product_STYLESTYLE3TAGUI_L {
-  left: 0px;
+  left: -188px;
   top: 250px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 85px;
   white-space: nowrap;
   text-align: center;
@@ -107,10 +107,10 @@
   color: rgba(25,21,184,1);
 }
 #Product_STYLESTYLE3TAGUI_L_w {
-  left: 0px;
+  left: -188px;
   top: 194px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 85px;
   white-space: nowrap;
   text-align: center;
@@ -121,10 +121,10 @@
   color: rgba(25,21,184,1);
 }
 #Product_STYLESTYLE3TAGUI_L_x {
-  left: 0px;
+  left: -188px;
   top: 137px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 85px;
   white-space: nowrap;
   text-align: center;
@@ -135,10 +135,10 @@
   color: rgba(25,21,184,1);
 }
 #Product_STYLESTYLE3TAGUI_L_y {
-  left: 0px;
+  left: -188px;
   top: 81px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 85px;
   white-space: nowrap;
   text-align: center;
@@ -149,10 +149,10 @@
   color: rgba(25,21,184,1);
 }
 #Products_STYLESTYLE3TAGH5 {
-  left: 5px;
+  left: -188px;
   top: 0px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 107px;
   white-space: nowrap;
   line-height: 34px;
@@ -165,10 +165,10 @@
   color: rgba(25,21,184,1);
 }
 #Resource_STYLESTYLE3TAGUI_L {
-  left: 513px;
+  left: 100px;
   top: 250px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 45px;
   white-space: nowrap;
   text-align: center;
@@ -179,10 +179,10 @@
   color: rgba(25,21,184,1);
 }
 #Resource_STYLESTYLE3TAGUI_L_ {
-  left: 518px;
+  left: 100px;
   top: 194px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 59px;
   white-space: nowrap;
   text-align: center;
@@ -193,10 +193,10 @@
   color: rgba(25,21,184,1);
 }
 #Resource_STYLESTYLE3TAGUI_L_a {
-  left: 512px;
+  left: 100px;
   top: 137px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 41px;
   white-space: nowrap;
   text-align: center;
@@ -207,10 +207,10 @@
   color: rgba(25,21,184,1);
 }
 #Resource_STYLESTYLE3TAGUI_L_b {
-  left: 515px;
+  left: 100px;
   top: 81px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 49px;
   white-space: nowrap;
   text-align: center;
@@ -221,10 +221,10 @@
   color: rgba(25,21,184,1);
 }
 #Resources_STYLESTYLE3TAGH5 {
-  left: 512px;
+  left:100px;
   top: 0px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 122px;
   white-space: nowrap;
   line-height: 34px;
@@ -240,7 +240,7 @@
   left: 140px;
   top: 72px;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 345px;
   height: 74px;
   line-height: 26px;
@@ -256,7 +256,7 @@
   left: 140px;
 
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 179px;
   white-space: nowrap;
   line-height: 42px;
@@ -279,7 +279,7 @@
   shape-rendering: auto;
 }
 .Line_17 {
-  overflow: visible;
+  overflow: none;
   position: absolute;
   width: 53.5px;
   height: 2.5px;
@@ -293,7 +293,7 @@
   height: 49px;
   left: 130px;
   top: 181px;
-  overflow: visible;
+  overflow: none;
 }
 #facebook_ {
   position: absolute;
@@ -301,14 +301,14 @@
   height: 49px;
   left: 75px;
   top: 0px;
-  overflow: visible;
+  overflow: none;
 }
 #Rectangle_51 {
   fill: rgba(255,255,255,1);
 }
 .Rectangle_51 {
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 53px;
   height: 49px;
   left: 0px;
@@ -318,7 +318,7 @@
   fill: rgba(25,21,184,1);
 }
 .Icon_awesome-facebook-f {
-  overflow: visible;
+  overflow: none;
   position: absolute;
   width: 14.204px;
   height: 26.521px;
@@ -332,14 +332,14 @@
   height: 49px;
   left: 150px;
   top: 0px;
-  overflow: visible;
+  overflow: none;
 }
 #Rectangle_52 {
   fill: rgba(255,255,255,1);
 }
 .Rectangle_52 {
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 53px;
   height: 49px;
   left: 0px;
@@ -349,7 +349,7 @@
   fill: rgba(25,21,184,1);
 }
 .Icon_simple-twitter {
-  overflow: visible;
+  overflow: none;
   position: absolute;
   width: 27.876px;
   height: 22.656px;
@@ -363,14 +363,14 @@
   height: 49px;
   left: 225px;
   top: 0px;
-  overflow: visible;
+  overflow: none;
 }
 #Rectangle_53 {
   fill: rgba(255,255,255,1);
 }
 .Rectangle_53 {
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 53px;
   height: 49px;
   left: 0px;
@@ -380,7 +380,7 @@
   fill: rgba(25,21,184,1);
 }
 .Icon_awesome-reddit-alien {
-  overflow: visible;
+  overflow: none;
   position: absolute;
   width: 27.405px;
   height: 25.882px;
@@ -394,14 +394,14 @@
   height: 49px;
   left: 0px;
   top: 0px;
-  overflow: visible;
+  overflow: none;
 }
 #Rectangle_19 {
   fill: rgba(255,255,255,1);
 }
 .Rectangle_19 {
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 53px;
   height: 49px;
   left: 0px;
@@ -414,7 +414,7 @@
 .Rectangle_54 {
   display: none;
   position: absolute;
-  overflow: visible;
+  overflow: none;
   width: 95px;
   height: 93px;
   left: 10px;
@@ -424,7 +424,7 @@
   fill: rgba(25,21,184,1);
 }
 .Icon_awesome-linkedin-in {
-  overflow: visible;
+  overflow: none;
   position: absolute;
   width: 24.705px;
   height: 24.704px;
