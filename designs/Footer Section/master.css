@@ -1,250 +1,63 @@
-#Footer {
-  position: absolute;
-  width: 633px;
-  height: 274px;
-  left: 1138px;
+.akruti-jd-footer{
+  margin: 3%;
+}
 
-  overflow: none;
-}
-#METADATA {
-  display: none;
-  left: 915px;
-  top: -2806px;
-  position: absolute;
-  overflow: hidden;
-  width: 11px;
-  height: 10px;
-  text-align: left;
-  font-family: Arial;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 3px;
-}
 #Service_STYLESTYLE3TAGUI_L {
-  left: -38px;
-  top: 250px;
-  position: absolute;
-  overflow: none;
-  width: 79px;
-  white-space: nowrap;
   text-align: center;
   font-family: Noto Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   color: rgba(25,21,184,1);
 }
-#Service_STYLESTYLE3TAGUI_L_r {
-  left: -38px;
-  top: 194px;
-  position: absolute;
-  overflow: none;
-  width: 79px;
-  white-space: nowrap;
-  text-align: center;
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(25,21,184,1);
-}
-#Service_STYLESTYLE3TAGUI_L_s {
-  left: -38px;
-  top: 137px;
-  position: absolute;
-  overflow: none;
-  width: 79px;
-  white-space: nowrap;
-  text-align: center;
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(25,21,184,1);
-}
-#Service_STYLESTYLE3TAGUI_L_t {
-  left: -38px;
-  top: 81px;
-  position: absolute;
-  overflow: none;
-  width: 79px;
-  white-space: nowrap;
-  text-align: center;
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(25,21,184,1);
-}
+
 #Services_STYLESTYLE3TAGH5 {
-  left: -38px;
-  top: 0px;
-  position: absolute;
-  overflow: none;
-  width: 99px;
-  white-space: nowrap;
   line-height: 34px;
-  margin-top: -5px;
-  text-align: left;
+  text-align: center;
   font-family: Noto Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.3rem;
   color: rgba(25,21,184,1);
 }
 #Product_STYLESTYLE3TAGUI_L {
-  left: -188px;
-  top: 250px;
-  position: absolute;
-  overflow: none;
-  width: 85px;
-  white-space: nowrap;
   text-align: center;
   font-family: Noto Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   color: rgba(25,21,184,1);
 }
-#Product_STYLESTYLE3TAGUI_L_w {
-  left: -188px;
-  top: 194px;
-  position: absolute;
-  overflow: none;
-  width: 85px;
-  white-space: nowrap;
-  text-align: center;
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(25,21,184,1);
-}
-#Product_STYLESTYLE3TAGUI_L_x {
-  left: -188px;
-  top: 137px;
-  position: absolute;
-  overflow: none;
-  width: 85px;
-  white-space: nowrap;
-  text-align: center;
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(25,21,184,1);
-}
-#Product_STYLESTYLE3TAGUI_L_y {
-  left: -188px;
-  top: 81px;
-  position: absolute;
-  overflow: none;
-  width: 85px;
-  white-space: nowrap;
-  text-align: center;
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(25,21,184,1);
-}
+
 #Products_STYLESTYLE3TAGH5 {
-  left: -188px;
-  top: 0px;
-  position: absolute;
-  overflow: none;
-  width: 107px;
-  white-space: nowrap;
   line-height: 34px;
-  margin-top: -5px;
-  text-align: left;
+  text-align: center;
   font-family: Noto Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.3rem;
   color: rgba(25,21,184,1);
 }
 #Resource_STYLESTYLE3TAGUI_L {
-  left: 100px;
-  top: 250px;
-  position: absolute;
-  overflow: none;
-  width: 45px;
-  white-space: nowrap;
   text-align: center;
   font-family: Noto Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   color: rgba(25,21,184,1);
 }
-#Resource_STYLESTYLE3TAGUI_L_ {
-  left: 100px;
-  top: 194px;
-  position: absolute;
-  overflow: none;
-  width: 59px;
-  white-space: nowrap;
-  text-align: center;
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(25,21,184,1);
-}
-#Resource_STYLESTYLE3TAGUI_L_a {
-  left: 100px;
-  top: 137px;
-  position: absolute;
-  overflow: none;
-  width: 41px;
-  white-space: nowrap;
-  text-align: center;
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(25,21,184,1);
-}
-#Resource_STYLESTYLE3TAGUI_L_b {
-  left: 100px;
-  top: 81px;
-  position: absolute;
-  overflow: none;
-  width: 49px;
-  white-space: nowrap;
-  text-align: center;
-  font-family: Noto Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(25,21,184,1);
-}
+
 #Resources_STYLESTYLE3TAGH5 {
-  left:100px;
-  top: 0px;
-  position: absolute;
-  overflow: none;
-  width: 122px;
-  white-space: nowrap;
   line-height: 34px;
-  margin-top: -5px;
-  text-align: left;
+  text-align: center;
   font-family: Noto Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.3rem;
   color: rgba(25,21,184,1);
 }
 #Description_STYLESTYLE3TAGP {
-  left: 140px;
-  top: 72px;
-  position: absolute;
-  overflow: none;
-  width: 345px;
-  height: 74px;
   line-height: 26px;
-  margin-top: -5px;
   text-align: left;
   font-family: Noto Sans;
   font-style: normal;
@@ -253,182 +66,60 @@
   color: rgba(25,21,184,1);
 }
 #Company_STYLESTYLE3TAGH4 {
-  left: 140px;
-
-  position: absolute;
-  overflow: none;
-  width: 179px;
-  white-space: nowrap;
-  line-height: 42px;
-  margin-top: -5px;
   text-align: left;
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
   color: rgba(25,21,184,1);
-  text-transform: capitalize;
-}
-#Line_17 {
-  fill: transparent;
-  stroke: rgba(255,255,255,1);
-  stroke-width: 2.5px;
-  stroke-linejoin: miter;
-  stroke-linecap: round;
-  stroke-miterlimit: 4;
-  shape-rendering: auto;
-}
-.Line_17 {
-  overflow: none;
-  position: absolute;
-  width: 53.5px;
-  height: 2.5px;
-  left: 1256.5px;
-  top: 54.5px;
-  transform: matrix(1,0,0,1,0,0);
-}
-#share_it {
-  position: absolute;
-  width: 278px;
-  height: 49px;
-  left: 130px;
-  top: 181px;
-  overflow: none;
-}
-#facebook_ {
-  position: absolute;
-  width: 53px;
-  height: 49px;
-  left: 75px;
-  top: 0px;
-  overflow: none;
-}
-#Rectangle_51 {
-  fill: rgba(255,255,255,1);
-}
-.Rectangle_51 {
-  position: absolute;
-  overflow: none;
-  width: 53px;
-  height: 49px;
-  left: 0px;
-  top: 0px;
 }
 #Icon_awesome-facebook-f {
   fill: rgba(25,21,184,1);
 }
 .Icon_awesome-facebook-f {
-  overflow: none;
-  position: absolute;
   width: 14.204px;
   height: 26.521px;
-  left: 19px;
-  top: 11px;
   transform: matrix(1,0,0,1,0,0);
 }
-#twitter {
-  position: absolute;
-  width: 53px;
-  height: 49px;
-  left: 150px;
-  top: 0px;
-  overflow: none;
-}
-#Rectangle_52 {
-  fill: rgba(255,255,255,1);
-}
-.Rectangle_52 {
-  position: absolute;
-  overflow: none;
-  width: 53px;
-  height: 49px;
-  left: 0px;
-  top: 0px;
-}
+
 #Icon_simple-twitter {
   fill: rgba(25,21,184,1);
 }
 .Icon_simple-twitter {
-  overflow: none;
-  position: absolute;
   width: 27.876px;
   height: 22.656px;
-  left: 13.014px;
-  top: 13px;
   transform: matrix(1,0,0,1,0,0);
 }
-#reddit {
-  position: absolute;
-  width: 53px;
-  height: 49px;
-  left: 225px;
-  top: 0px;
-  overflow: none;
-}
-#Rectangle_53 {
-  fill: rgba(255,255,255,1);
-}
-.Rectangle_53 {
-  position: absolute;
-  overflow: none;
-  width: 53px;
-  height: 49px;
-  left: 0px;
-  top: 0px;
-}
+
 #Icon_awesome-reddit-alien {
   fill: rgba(25,21,184,1);
 }
 .Icon_awesome-reddit-alien {
-  overflow: none;
-  position: absolute;
   width: 27.405px;
   height: 25.882px;
-  left: 13px;
-  top: 12px;
   transform: matrix(1,0,0,1,0,0);
 }
-#linkedin_i {
-  position: absolute;
-  width: 53px;
-  height: 49px;
-  left: 0px;
-  top: 0px;
-  overflow: none;
-}
-#Rectangle_19 {
-  fill: rgba(255,255,255,1);
-}
-.Rectangle_19 {
-  position: absolute;
-  overflow: none;
-  width: 53px;
-  height: 49px;
-  left: 0px;
-  top: 0px;
-}
-#Rectangle_54 {
-  filter: blur(10px);
-  fill: rgba(55,52,235,1);
-}
-.Rectangle_54 {
-  display: none;
-  position: absolute;
-  overflow: none;
-  width: 95px;
-  height: 93px;
-  left: 10px;
-  top: 16px;
-}
+
+
 #Icon_awesome-linkedin-in {
   fill: rgba(25,21,184,1);
 }
 .Icon_awesome-linkedin-in {
-  overflow: none;
-  position: absolute;
   width: 24.705px;
   height: 24.704px;
   left: 14px;
   top: 12px;
   transform: matrix(1,0,0,1,0,0);
+}
+@media (max-width: 700px){
+  .akruti-jd-social-media-icons{
+    margin-bottom: 20px;
+  }
+  #Resource_STYLESTYLE3TAGUI_L, #Service_STYLESTYLE3TAGUI_L, #Product_STYLESTYLE3TAGUI_L{
+    font-size: 0.8rem;
+  }
+  #Resources_STYLESTYLE3TAGH5, #Products_STYLESTYLE3TAGH5, #Services_STYLESTYLE3TAGH5{
+    font-size: 1rem;
+  }
+
 }
