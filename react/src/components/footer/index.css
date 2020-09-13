@@ -1,0 +1,133 @@
+.akruti-jd-footer{
+    margin: 3%;
+  }
+  
+  #Service_STYLESTYLE3TAGUI_L {
+    text-align: center;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgba(25,21,184,1);
+  }
+  
+  #Services_STYLESTYLE3TAGH5 {
+    line-height: 34px;
+    text-align: center;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: rgba(25,21,184,1);
+  }
+  #Product_STYLESTYLE3TAGUI_L {
+    text-align: center;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgba(25,21,184,1);
+  }
+  
+  #Products_STYLESTYLE3TAGH5 {
+    line-height: 34px;
+    text-align: center;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: rgba(25,21,184,1);
+  }
+  #Resource_STYLESTYLE3TAGUI_L {
+    text-align: center;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgba(25,21,184,1);
+  }
+  
+  #Resources_STYLESTYLE3TAGH5 {
+    line-height: 34px;
+    text-align: center;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: rgba(25,21,184,1);
+  }
+  #Description_STYLESTYLE3TAGP {
+    line-height: 26px;
+    text-align: left;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(25,21,184,1);
+  }
+  #Company_STYLESTYLE3TAGH4 {
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    color: rgba(25,21,184,1);
+  }
+  #Icon_awesome-facebook-f {
+    fill: rgba(25,21,184,1);
+  }
+  .Icon_awesome-facebook-f {
+    width: 14.204px;
+    height: 26.521px;
+    transform: matrix(1,0,0,1,0,0);
+  }
+  
+  #Icon_simple-twitter {
+    fill: rgba(25,21,184,1);
+  }
+  .Icon_simple-twitter {
+    width: 27.876px;
+    height: 22.656px;
+    transform: matrix(1,0,0,1,0,0);
+  }
+  
+  #Icon_awesome-reddit-alien {
+    fill: rgba(25,21,184,1);
+  }
+  .Icon_awesome-reddit-alien {
+    width: 27.405px;
+    height: 25.882px;
+    transform: matrix(1,0,0,1,0,0);
+  }
+  
+  
+  #Icon_awesome-linkedin-in {
+    fill: rgba(25,21,184,1);
+  }
+  .Icon_awesome-linkedin-in {
+    width: 24.705px;
+    height: 24.704px;
+    left: 14px;
+    top: 12px;
+    transform: matrix(1,0,0,1,0,0);
+  }
+  @media (max-width: 700px){
+    .akruti-jd-social-media-icons{
+      margin-bottom: 20px;
+    }
+    #Resource_STYLESTYLE3TAGUI_L, #Service_STYLESTYLE3TAGUI_L, #Product_STYLESTYLE3TAGUI_L{
+      font-size: 0.8rem;
+    }
+    #Resources_STYLESTYLE3TAGH5, #Products_STYLESTYLE3TAGH5, #Services_STYLESTYLE3TAGH5{
+      font-size: 1rem;
+    }
+  
+  }
+  
+  @media (max-width:765px){
+    .aradhna_footericons{
+      justify-content: center;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+  }

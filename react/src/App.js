@@ -23,6 +23,8 @@ import Login from './pages/Login';
 //   }}/>
 // }
 
+import MainPage from './pages/MainPage';
+
 class App extends Component {
 
   render() {
@@ -46,6 +48,7 @@ class App extends Component {
             {/* default route */}
             <Route exact path='/' component={Dashboard} />
           </main>
+          {/* <MainPage /> */}
         </div>
       ) : <Login />
     );

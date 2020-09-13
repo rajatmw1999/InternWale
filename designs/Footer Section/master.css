@@ -123,3 +123,11 @@
   }
 
 }
+
+@media (max-width:765px){
+  .aradhna_footericons{
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}

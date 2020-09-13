@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- CSS only -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="master.css">
-<title>Footer Section</title>
-<body>
-	<div class="akruti-jd-footer">
+import React, { Component } from "react";
+
+import './index.css'
+
+export default class Footer extends Component {
+  render() {
+    return (
+        <div class="akruti-jd-footer">
 		<div class="row">
 			<div id="Description_STYLESTYLE3TAGP" class="col-12 col-md-6">
 				<h1 id="Company_STYLESTYLE3TAGH4">Internwale</h1>
@@ -65,5 +62,6 @@
 		</div>
 	</div>
 </div>
-</body>
-</html>
+    );
+  }
+}
