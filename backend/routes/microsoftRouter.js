@@ -1,6 +1,6 @@
 const express= require("express")
 const Router= express.Router();
 
-const scraper=require("./finalScraper")
+const scraper=require("../scrappers/microsoft_scraper/finalScraper")
 
 scraper();
