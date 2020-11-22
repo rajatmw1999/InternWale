@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
 
 const job_Data = new mongoose.Schema({
-  Title: {
+  CompanyName: {
     type: String,
   },
-  Location: {
+  UID: {
     type: String,
+  },
+  Data:[
+  Title: {
+	type:String
   },
   Category: {
     type: String,
@@ -25,6 +29,10 @@ const job_Data = new mongoose.Schema({
   Description: {
     type: String,
   },
+Location:{
+type:String
+}
+]
 });
 
 module.exports = JobData = mongoose.model("JobData", job_Data);
