@@ -23,7 +23,8 @@ async function scrapperBCG() {
         const datePosted = result.children[1].children[2].innerText.split(
           " "
         )[1];
-        temp.push({ nameOfJob, link, location, desc, datePosted });
+        const company="BCG"
+        temp.push({ nameOfJob, link, location, desc, datePosted, company });
       }
       return temp;
     },
