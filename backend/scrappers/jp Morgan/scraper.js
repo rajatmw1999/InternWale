@@ -20,6 +20,7 @@ async function scraper (){
                 
                 var link=job.querySelector('div.filter-display-title p a')
                 jobJson.link= "https://careers.jpmorgan.com/".concat(link.getAttribute('href'))
+                  jobJson.company="JP Morgan"
                 }
               catch (exception){
       
@@ -38,7 +39,7 @@ async function scraper (){
     
       const jobData= await extractJobs(url)
       console.log(jobData)
-        
+       return jobData;
 
       await browser.close();
 }
