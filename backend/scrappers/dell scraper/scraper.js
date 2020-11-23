@@ -18,6 +18,7 @@ async function scraper() {
                     jobJson.company = job.querySelector('span.company-name').innerText;
         
                     jobJson.link=job.getAttribute('href')
+                    jobJson.company="Dell"
         
                 }
                 catch (exception){
@@ -41,6 +42,7 @@ async function scraper() {
   let jobs=await extractJobs()
 
   console.log(jobs)
+   return jobs;
 
   await browser.close();
 }
