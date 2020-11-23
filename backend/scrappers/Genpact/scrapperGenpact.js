@@ -50,6 +50,7 @@ async function scrapperHelp(page) {
           posted: result.children[0].children[0].children[1].children[6].innerText.split(
             ": "
           )[1],
+          company: "Genpact"
         });
     });
     return temp;
