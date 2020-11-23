@@ -20,6 +20,7 @@ async function scraper (){
       
                   var link=job.querySelector('div.gc-card__cta > a')
                   jobJson.link= link.getAttribute('href')
+                  jobJson.company="Google"
                     }
               catch (exception){
       
@@ -56,7 +57,7 @@ async function scraper (){
     
       const jobData= await extractJobs(url)
       console.log(jobData)
-        
+        return jobData;
 
       await browser.close();
 }
