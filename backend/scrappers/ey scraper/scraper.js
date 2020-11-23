@@ -22,7 +22,8 @@ async function scraper() {
                     jobJson.name = link.innerText;
                     jobJson.location = job.querySelector('span.location').innerText;
         
-                    jobJson.link=link.getAttribute('href')        
+                    jobJson.link=link.getAttribute('href')  
+                    jobJson.company="EY"
                 }
                 catch (exception){
         
@@ -54,9 +55,9 @@ async function scraper() {
   
     let firstUrl='https://eygbl.referrals.selectminds.com/experienced-opportunities/jobs/search/96405337';
 
-
-  console.log(await extractJobs(firstUrl))
-
+    let jobs=await extractJobs(firstUrl);
+  console.log(jobs)
+return jobs;
   await browser.close();
 }
 
