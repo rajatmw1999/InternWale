@@ -21,6 +21,7 @@ async function scraper (){
                   jobJson.description = job.querySelector('p.job-description.au-target').innerText;
 
                   jobJson.link= job.querySelector('a').getAttribute('href')
+                  jobJson.company="Cognizant"
               }
               catch (exception){
       
@@ -56,7 +57,7 @@ async function scraper (){
     
       const jobData= await extractJobs(url)
       console.log(jobData)
-
+       return jobData;
       await browser.close();
 }
 
