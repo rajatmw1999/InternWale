@@ -19,6 +19,7 @@ async function scraper () {
                 jobJson.type=job.querySelector('div.position-priority-container.line-clamp').innerText.trim();
                 
                 jobJson.link="https://airasia.eightfold.ai/careers?pid=1516857&location=Bengaluru%20-%20Alpha%203%2C%20India&domain=airasia.com"
+                 jobJson.company="Air Asia"
                 }
               catch (exception){
       
