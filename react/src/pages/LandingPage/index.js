@@ -19,13 +19,13 @@ class LandingPage extends React.Component {
         <br />
         <div className = 'container-fluid'>
             <div className='row'>
-                <div className='col-lg-1'>
+                <div className='col-lg-0'>
 
                 </div>
                 <div className='col-lg-3'>
                     <FilterBox />
                 </div>
-                <div className='col-lg-7'>
+                <div className='col-lg-8'>
                 <JobCard />
                 <JobCard />
                 <JobCard />
