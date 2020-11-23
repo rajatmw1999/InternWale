@@ -20,6 +20,7 @@ async function scraper () {
                 
                 var link=document.querySelector('a.button-primary.button-primary--blue.animated.pulse.go')
                 jobJson.link= 'https://axaindia.com'.concat(link.getAttribute('href'));
+                jobJson.company="AXA"  
                 }
               catch (exception){
       
