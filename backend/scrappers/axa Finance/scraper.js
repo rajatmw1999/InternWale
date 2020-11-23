@@ -46,8 +46,8 @@ async function scraper() {
       else{
           console.log(jobData)
       }
-        
-
+    
+        return jobData;
       await browser.close();
 }
 
