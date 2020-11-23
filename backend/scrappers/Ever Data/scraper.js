@@ -20,6 +20,7 @@ async function scraper(){
                 
                 let link=job.querySelector('div.offer-btn-vps');
                 jobJson.link="https://www.everdata.com".concat(link.getAttribute('href'))
+                 jobJson.company="Ever Data"
                 }
               catch (exception){
       
