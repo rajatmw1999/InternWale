@@ -22,7 +22,8 @@ async function scrapperAccenture() {
           const link = result.children[0].href;
           const location =
             result.children[0].children[0].children[0].children[0].innerText;
-          temp.push({ nameOfJob, link, location });
+          const company="Accenture";
+          temp.push({ nameOfJob, link, location, company });
         }
         return temp;
       },
