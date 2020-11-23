@@ -45,7 +45,7 @@ async function scraper () {
           console.log(jobData)
       }
         
-
+      return jobData;
       await browser.close();
 }
 
