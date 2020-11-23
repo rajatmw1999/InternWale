@@ -22,6 +22,7 @@ async function scraper(){
       
                   jobJson.description = job.querySelector('div.coveo-result-row:nth-child(3) div.coveo-result-cell span.CoveoFieldValue > span').innerText;
                   jobJson.link= job.querySelector('div.coveo-result-cell > h3 > a').getAttribute('href')
+                  jobJson.company="Intel"
               }
               catch (exception){
       
@@ -59,6 +60,7 @@ async function scraper(){
     
       const jobData= await extractJobs(url)
       console.log(jobData)
+        return jobData;
       await browser.close();
 }
 
