@@ -41,12 +41,13 @@ async function scraper () {
     
       const jobData= await extractJobs(url)
       if(jobData.length==0){
-          console.log("No job found")
+          jobData="No job found"
+          console.log(jobData)
       }
       else{
           console.log(jobData)
       }
-        
+       return jobData;   
 
       await browser.close();
 }
