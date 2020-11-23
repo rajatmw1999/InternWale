@@ -49,6 +49,7 @@ async function scrapperHelp(page) {
           type: result.children[1].children[0].children[0].children[4].innerText.split(
             ":"
           )[1],
+          company: "HSBC"
         });
       }
     );
