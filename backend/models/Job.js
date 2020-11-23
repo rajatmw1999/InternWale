@@ -4,10 +4,16 @@ const job_Data = new mongoose.Schema({
   CompanyName: {
     type: String,
   },
+  DateScrap:{
+    type:String,
+    default:Date.now()
+  },
   UID: {
     type: String,
   },
-  Data:[
+  Data:
+  [
+    {
   Title: {
 	type:String
   },
@@ -31,6 +37,7 @@ const job_Data = new mongoose.Schema({
   },
 Location:{
 type:String
+}
 }
 ]
 });
