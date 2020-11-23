@@ -4,7 +4,7 @@ import './index.css'
 export default class JobCard extends Component {
   render() {
     return (
-    <div class="">
+    <div>
         <div class="card vanshika-jc-card">
           
           <div>

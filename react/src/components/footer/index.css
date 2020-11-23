@@ -1,133 +1,129 @@
-.akruti-jd-footer{
-    margin: 3%;
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300&display=swap');
+
+.footer-clean {
+  
+ 
+    padding: 50px 0;
+    background-color: #28282d;
+    color: #fff;
+    font-family: Trebuchet ms;
+    clear: both;
+
   }
   
-  #Service_STYLESTYLE3TAGUI_L {
-    text-align: center;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1rem;
-    color: rgba(25,21,184,1);
-  }
-  
-  #Services_STYLESTYLE3TAGH5 {
-    line-height: 34px;
-    text-align: center;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: rgba(25,21,184,1);
-  }
-  #Product_STYLESTYLE3TAGUI_L {
-    text-align: center;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1rem;
-    color: rgba(25,21,184,1);
-  }
-  
-  #Products_STYLESTYLE3TAGH5 {
-    line-height: 34px;
-    text-align: center;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: rgba(25,21,184,1);
-  }
-  #Resource_STYLESTYLE3TAGUI_L {
-    text-align: center;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1rem;
-    color: rgba(25,21,184,1);
-  }
-  
-  #Resources_STYLESTYLE3TAGH5 {
-    line-height: 34px;
-    text-align: center;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: rgba(25,21,184,1);
-  }
-  #Description_STYLESTYLE3TAGP {
-    line-height: 26px;
-    text-align: left;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: rgba(25,21,184,1);
-  }
-  #Company_STYLESTYLE3TAGH4 {
-    text-align: left;
+  .footer-clean h3 {
     font-family: Poppins;
-    font-style: normal;
+    margin-top: 0;
+    margin-bottom: 12px;
     font-weight: bold;
-    font-size: 32px;
-    color: rgba(25,21,184,1);
-  }
-  #Icon_awesome-facebook-f {
-    fill: rgba(25,21,184,1);
-  }
-  .Icon_awesome-facebook-f {
-    width: 14.204px;
-    height: 26.521px;
-    transform: matrix(1,0,0,1,0,0);
+    font-size: 16px;
+    color: darkgray;
   }
   
-  #Icon_simple-twitter {
-    fill: rgba(25,21,184,1);
-  }
-  .Icon_simple-twitter {
-    width: 27.876px;
-    height: 22.656px;
-    transform: matrix(1,0,0,1,0,0);
-  }
-  
-  #Icon_awesome-reddit-alien {
-    fill: rgba(25,21,184,1);
-  }
-  .Icon_awesome-reddit-alien {
-    width: 27.405px;
-    height: 25.882px;
-    transform: matrix(1,0,0,1,0,0);
+  .footer-clean ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
   }
   
-  
-  #Icon_awesome-linkedin-in {
-    fill: rgba(25,21,184,1);
-  }
-  .Icon_awesome-linkedin-in {
-    width: 24.705px;
-    height: 24.704px;
-    left: 14px;
-    top: 12px;
-    transform: matrix(1,0,0,1,0,0);
-  }
-  @media (max-width: 700px){
-    .akruti-jd-social-media-icons{
-      margin-bottom: 20px;
-    }
-    #Resource_STYLESTYLE3TAGUI_L, #Service_STYLESTYLE3TAGUI_L, #Product_STYLESTYLE3TAGUI_L{
-      font-size: 0.8rem;
-    }
-    #Resources_STYLESTYLE3TAGH5, #Products_STYLESTYLE3TAGH5, #Services_STYLESTYLE3TAGH5{
-      font-size: 1rem;
-    }
-  
+  .footer-clean ul a {
+    font-family: Poppins;
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
   }
   
-  @media (max-width:765px){
-    .aradhna_footericons{
-      justify-content: center;
-      padding-bottom: 10px;
-      padding-top: 10px;
+  .footer-clean ul a:hover {
+    opacity: 1;
+  }
+  
+  .footer-clean .item.social {
+    text-align: right;
+  }
+  
+  @media (max-width:767px) {
+    .footer-clean .item {
+      text-align: center;
+      padding-bottom: 20px;
     }
   }
+  
+  @media (max-width: 768px) {
+    .footer-clean .item.social {
+      text-align: center;
+    }
+  }
+  
+  .footer-clean .item.social > a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    margin-top: 22px;
+    color: inherit;
+    opacity: 0.75;
+  }
+  
+  .footer-clean .item.social > a.fb-col:hover {
+    opacity: 1;
+    background:#3b5998;
+    border-color: #28282d;
+  }
+  
+  .footer-clean .item.social > a.tw-col:hover {
+    opacity: 1;border-color: #28282d;
+    background:#00acee;
+  }
+  
+  .footer-clean .item.social > a.lin-col:hover {
+    opacity: 1;
+    border-color: #28282d;
+    background:#0e76a8 ;
+  }
+  
+  .footer-clean .item.social > a.ins-col:hover {
+    opacity: 1;
+    border-color: #28282d;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  }
+  
+  @media (max-width:991px) {
+    .footer-clean .item.social > a {
+      margin-top: 40px;
+    }
+  }
+  
+  @media (max-width:767px) {
+    .footer-clean .item.social > a {
+      margin-top: 10px;
+    }
+  }
+  
+  .footer-clean .copyright {
+    font-family: Poppins;
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 13px;
+    opacity: 0.6;
+  }
+
+
+
+.aradhna_footerli{
+  line-height: 1.9em;
+  margin-bottom: 0;
+}
+  
+#rajat_footer_logo{
+  width:60%;
+}
