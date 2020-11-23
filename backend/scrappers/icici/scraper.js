@@ -20,6 +20,7 @@ async function scraper (){
                 
                 var link=job.querySelector('a.title.fw500.ellipsis')
                 jobJson.link= link.getAttribute('href')
+                jobJson.company="ICICI"
                 }
               catch (exception){
       
@@ -52,8 +53,7 @@ async function scraper (){
     
       const jobData= await extractJobs(url)
       console.log(jobData)
-        
-
+        return jobData;
       await browser.close();
 }
 
