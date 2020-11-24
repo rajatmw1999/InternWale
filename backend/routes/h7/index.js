@@ -1,15 +1,15 @@
+const scrapper = require("../../scrappers/Myntra/scraper");
 const router = require("express").Router();
-const scrapper = require("../../scrappers/kpmg scraper/scraper");
 const Job = require("../../models/Job");
 const data = [];
-router.get("/h1", function (req, res) {
+router.get("/h7", function (req, res) {
   scrapper().then((jobs) => {
     for (let i = 0; i < jobs.length && i < 20; i++) {
       const new_job = {
-        Title: jobs[i].title || null,
+        Title: jobs[i].title,
         Category: jobs[i].category || null,
-        DatePosted: jobs[i].date || null,
-        Company: jobs[i].companyName,
+        DatePosted: null,
+        Company: jobs[i].CompanyName,
         LinkToJobPost: jobs[i].link || null,
         JobId: null,
         Description: jobs[i].desc || null,
@@ -19,9 +19,9 @@ router.get("/h1", function (req, res) {
     }
   });
   const newData = new Job({
-    CompanyName: "KPMG",
+    CompanyName: "Myntra",
     DateScrap: Date.now(),
-    UID: "kpmg_1",
+    UID: "Myntra",
     Data: data,
   });
 

@@ -1,74 +1,75 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require("puppeteer");
 
-async function scrapper(url){
-
-  const extractJobs= async(surl)=>{
+async function scrapper() {
+  const extractJobs = async (url) => {
     const page = await browser.newPage();
-    
-    await page.goto(surl,{waitUntil:"networkidle2"});
-    
+
+    await page.goto(url, { waitUntil: "networkidle2" });
+
+    // console.log(url)
     let jobData = await page.evaluate(() => {
       let jobs = [];
-      
-      let jobElms = document.querySelectorAll('div.information-block');
-      
+
+      let jobElms = document.querySelectorAll("div.information-block");
+
       jobElms.forEach((job) => {
-          let jobJson = {};
-          try {
-              jobJson.name = job.querySelector('span.job-title').innerText;
-              jobJson.location = job.querySelector('span.job-location').innerText;
-              jobJson.category = job.querySelector('span.job-category').innerText;
-              jobJson.date = job.querySelector('span.job-date').innerText;
-  
-              var link=job.querySelector('a.au-target')
-              jobJson.link= link.getAttribute('href')
-  
-              jobJson.description = job.querySelector('div.description').innerText;
-          }
-          catch (exception){
-  
-          }
-          jobs.push(jobJson);
-        });
+        let jobJson = {};
+        try {
+          jobJson.title = job.querySelector("span.job-title").innerText;
+          jobJson.location = job.querySelector("span.job-location").innerText;
+          jobJson.category = job.querySelector("span.job-category").innerText;
+          jobJson.date = job.querySelector("span.job-date").innerText;
+
+          var link = job.querySelector("a.au-target");
+          jobJson.link = link.getAttribute("href");
+
+          jobJson.desc = job.querySelector("div.description").innerText;
+        } catch (exception) {}
+        jobs.push(jobJson);
+      });
       return jobs;
     });
 
-    
     //termination condition
-    if(jobData.length<1){
-      return jobData
+    if (jobData.length < 1) {
+      return jobData;
     }
     //next url to call
-    else{
-      let str= surl.substring(surl.indexOf('?')+1);
-      let city=surl.substring(surl.lastIndexOf('-')+1);
+    else {
+      let str = url.substring(url.indexOf("?") + 1);
       let nextUrl;
-      if(str.charAt(0)=='r'){
-        nextUrl= "https://careers.microsoft.com/professionals/us/en/search-results?".concat("from=20&s=1&rk=l-l-").concat(city)
-      }else{
-        let sub= parseInt(str.substring(5,str.indexOf('&')));
-        nextUrl="https://careers.microsoft.com/professionals/us/en/search-results?from=".concat(sub+20).concat("&s=1&rk=l-l-").concat(city);
+      if (str.charAt(0) == "r") {
+        nextUrl = "https://careers.microsoft.com/professionals/us/en/search-results?".concat(
+          "from=20&s=1&rk=l-l-bangalore"
+        );
+      } else {
+        let sub = parseInt(str.substring(5, str.indexOf("&")));
+        nextUrl = "https://careers.microsoft.com/professionals/us/en/search-results?from="
+          .concat(sub + 20)
+          .concat("&s=1&rk=l-l-bangalore");
       }
-      return jobData.concat(await extractJobs(nextUrl))
+      return jobData.concat(await extractJobs(nextUrl));
     }
-  }
-
+  };
 
   const browser = await puppeteer.launch();
-  
+
+  const url = "https://careers.microsoft.com/professionals/us/en/l-bangalore";
+
   const page = await browser.newPage();
-  await page.goto(url,{waitUntil:"networkidle2"});
-
+  await page.goto(url, { waitUntil: "networkidle2" });
+  //getting first url to scrape data
   let firsturl = await page.evaluate(() => {
-    let click=document.querySelector("#content > div.body-wrapper.ph-page-container > section:nth-child(2) > div > div > div.content-block > div > a");
-    return click.getAttribute('href')
+    let click = document.querySelector(
+      "#content > div.body-wrapper.ph-page-container > section:nth-child(2) > div > div > div.content-block > div > a"
+    );
+    return click.getAttribute("href");
   });
-  
 
-  const jobData= await extractJobs(firsturl)
+  const jobData = await extractJobs(firsturl);
+  // console.log(jobData);
   await browser.close();
-  console.log(jobData)
-  return jobData
+  return jobData;
 }
-
-module.exports=scrapper;
+// scrapper().then((res) => console.log(res));
+module.exports = scrapper;
