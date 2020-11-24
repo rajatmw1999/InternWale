@@ -45,4 +45,5 @@ async function scrapperAccenture() {
   await browser.close();
   return fullData;
 }
-scrapperAccenture().then((res) => console.log(res));
+
+module.exports = scrapperAccenture;

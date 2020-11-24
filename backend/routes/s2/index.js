@@ -1,7 +1,7 @@
-const scraper= require("../scrappers/Apple Jobs/scrapperApple.js");
+const scraper= require("../../scrappers/Apple Jobs/scrapperApple.js");
 const app= require("express")();
 const mongoose= require('mongoose');
-const job=require("../models/jobs");
+const job=require("../../models/Job");
 
 app.get("/s2",(req,res)=>{
     scraper().then(fullData=>{
@@ -34,7 +34,7 @@ app.get("/s2",(req,res)=>{
         });
       
         newData.save();
-        console.log("data saved in database");
+        console.log(newData);
     })
 });
 

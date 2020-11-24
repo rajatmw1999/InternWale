@@ -1,9 +1,9 @@
-const scraper= require("../scrappers/Accenture/scrapperAccenture.js");
-const app= require("express")();
+const scraper= require("../../scrappers/Accenture/scrapperAccenture.js");
+const router= require("express").Router();
 const mongoose= require('mongoose');
-const job=require("../models/jobs");
+const job=require("../../models/Job");
 
-app.get("/s1",(req,res)=>{
+router.get("/s1",function(req,res){
     scraper().then(fullData=>{
         let dataArray = [];
         let itr=0;
@@ -34,10 +34,8 @@ app.get("/s1",(req,res)=>{
         });
 
         newData.save();
+        console.log(newData);
     })
 });
 
-// app.listen(3000,(req,res)=>{
-//     console.log("app listening at http://localhost:3000")
-// })
-module.exports=app;
+module.exports=router;

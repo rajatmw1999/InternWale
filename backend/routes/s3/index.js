@@ -1,5 +1,4 @@
 const scraper= require("../scrappers/Barclays/scrapperBarclays.js");
-const scraper= require("./barclaysScraper");
 const app= require("express")();
 const job=require("../models/jobs");
 
