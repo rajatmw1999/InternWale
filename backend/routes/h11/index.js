@@ -17,7 +17,7 @@ router.get("/h11", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "PWC",
     DateScrap: Date.now(),
@@ -26,4 +26,8 @@ router.get("/h11", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h12');
+      console.log("Scrapped 11");
 });
+});
+module.exports = router;

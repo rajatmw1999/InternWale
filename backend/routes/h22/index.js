@@ -17,13 +17,17 @@ router.get("/h22", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "Wipro",
     DateScrap: Date.now(),
     UID: "Wipro_1",
     Data: data,
   });
-
   newData.save();
+  
+  console.log("Scrapped 22 ----------------DONE--------------------------.");
+  res.send("Done");
 });
+});
+module.exports = router;

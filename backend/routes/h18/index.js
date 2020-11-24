@@ -17,7 +17,7 @@ router.get("/h18", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "VistaraFinance",
     DateScrap: Date.now(),
@@ -26,4 +26,8 @@ router.get("/h18", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h19');
+      console.log("Scrapped 18");
 });
+});
+module.exports = router;

@@ -17,7 +17,7 @@ router.get("/h5", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "Mirum",
     DateScrap: Date.now(),
@@ -26,4 +26,9 @@ router.get("/h5", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h6');
+      console.log("Scrapped 5");
 });
+});
+
+module.exports = router;

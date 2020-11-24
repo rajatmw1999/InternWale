@@ -5,11 +5,11 @@ async function scraper() {
     const page = await browser.newPage();
 
     await page.goto(url, { waitUntil: "networkidle2" });
-    console.log(url);
+    // console.log(url);
 
     let jobData = await page.evaluate(() => {
       let jobs = [];
-      console.log("inside evaluate");
+      // console.log("inside evaluate");
       let jobElms = document.querySelectorAll("td.colTitle");
 
       jobElms.forEach((job) => {

@@ -17,7 +17,7 @@ router.get("/h13", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "Samsung",
     DateScrap: Date.now(),
@@ -26,4 +26,8 @@ router.get("/h13", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h14');
+  console.log("Scrapped 13");
 });
+});
+module.exports = router;

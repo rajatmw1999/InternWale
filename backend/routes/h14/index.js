@@ -17,7 +17,7 @@ router.get("/h14", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "SwissRe",
     DateScrap: Date.now(),
@@ -26,4 +26,8 @@ router.get("/h14", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h15');
+      console.log("Scrapped 14");
 });
+});
+module.exports = router;

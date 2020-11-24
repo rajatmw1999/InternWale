@@ -20,7 +20,7 @@ const job_Data = new mongoose.Schema({
         type: String,
       },
       DatePosted: {
-        type: Date,
+        type: String,
       },
       Company: {
         type: String,

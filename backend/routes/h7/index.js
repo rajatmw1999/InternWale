@@ -17,7 +17,7 @@ router.get("/h7", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "Myntra",
     DateScrap: Date.now(),
@@ -26,4 +26,8 @@ router.get("/h7", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h8');
+      console.log("Scrapped 7");
 });
+});
+module.exports = router;

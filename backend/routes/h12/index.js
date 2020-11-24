@@ -17,7 +17,7 @@ router.get("/h12", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "RSM",
     DateScrap: Date.now(),
@@ -26,4 +26,8 @@ router.get("/h12", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h13');
+      console.log("Scrapped 12");
 });
+});
+module.exports = router;

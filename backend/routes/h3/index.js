@@ -17,13 +17,19 @@ router.get("/h3", function (req, res) {
       };
       data.push(new_job);
     }
+  }).then((ans) => {
+    const newData = new Job({
+      CompanyName: "McKinsey",
+      DateScrap: Date.now(),
+      UID: "McKinsey_1",
+      Data: data,
+    });
+  
+    newData.save();
+    res.redirect('/scrap/data/h4');
+      console.log("Scrapped 3");
   });
-  const newData = new Job({
-    CompanyName: "McKinsey",
-    DateScrap: Date.now(),
-    UID: "McKinsey_1",
-    Data: data,
-  });
-
-  newData.save();
+  
 });
+
+module.exports = router;

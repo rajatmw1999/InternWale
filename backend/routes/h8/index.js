@@ -17,7 +17,7 @@ router.get("/h8", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "Oracle",
     DateScrap: Date.now(),
@@ -26,4 +26,8 @@ router.get("/h8", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h9');
+      console.log("Scrapped 8");
 });
+});
+module.exports = router;

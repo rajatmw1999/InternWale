@@ -12,12 +12,12 @@ router.get("/h21", function (req, res) {
         Company: jobs[i].CompanyName,
         LinkToJobPost: jobs[i].link || null,
         JobId: null,
-        Description: job[i].desc || null,
+        Description: jobs[i].desc || null,
         Location: jobs[i].location || null,
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "WellsFargo",
     DateScrap: Date.now(),
@@ -26,4 +26,8 @@ router.get("/h21", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h22');
+      console.log("Scrapped 21");
 });
+});
+module.exports = router;

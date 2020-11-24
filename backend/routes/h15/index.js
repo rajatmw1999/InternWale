@@ -17,7 +17,7 @@ router.get("/h15", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "Tokio Life",
     DateScrap: Date.now(),
@@ -26,4 +26,8 @@ router.get("/h15", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h16');
+      console.log("Scrapped 15");
 });
+});
+module.exports = router;

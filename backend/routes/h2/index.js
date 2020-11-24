@@ -2,8 +2,9 @@ const scrapper = require("../../scrappers/kratikal/scraper");
 const router = require("express").Router();
 const Job = require("../../models/Job");
 const data = [];
-router.get("/h2", function (req, res) {
-  scrapper().then((jobs) => {
+router.get("/h2", async (req, res)=> {
+  let data = [];
+  await scrapper().then((jobs) => {
     for (let i = 0; i < jobs.length && i < 20; i++) {
       const new_job = {
         Title: jobs[i].title,
@@ -17,13 +18,18 @@ router.get("/h2", function (req, res) {
       };
       data.push(new_job);
     }
+  }).then(async(ans) => {
+    const newData = new Job({
+      CompanyName: "Kratikal",
+      DateScrap: Date.now(),
+      UID: "Kratikal_1",
+      Data: data,
+    });
+    await newData.save();
+    res.redirect('/scrap/data/h3');
+      console.log("Scrapped 2");
   });
-  const newData = new Job({
-    CompanyName: "Kratikal",
-    DateScrap: Date.now(),
-    UID: "Kratikal_1",
-    Data: data,
-  });
-
-  newData.save();
+  
 });
+
+module.exports = router;

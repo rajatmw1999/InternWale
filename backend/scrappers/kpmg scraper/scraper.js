@@ -38,6 +38,7 @@ async function scraper() {
   const finalData = await extractJobs();
 
   await browser.close();
+  // console.log(finalData);
   return finalData;
 }
 module.exports = scraper;

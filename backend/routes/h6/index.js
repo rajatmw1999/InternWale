@@ -1,4 +1,5 @@
 const scrapper = require("../../scrappers/morgan Stanley/scraper");
+const router = require("express").Router();
 const Job = require("../../models/Job");
 const data = [];
 router.get("/h6", function (req, res) {
@@ -16,7 +17,7 @@ router.get("/h6", function (req, res) {
       };
       data.push(new_job);
     }
-  });
+  }).then((ans) => {
   const newData = new Job({
     CompanyName: "Morgan Stanley",
     DateScrap: Date.now(),
@@ -25,4 +26,9 @@ router.get("/h6", function (req, res) {
   });
 
   newData.save();
+  res.redirect('/scrap/data/h7');
+      console.log("Scrapped 6");
 });
+});
+
+module.exports = router;
