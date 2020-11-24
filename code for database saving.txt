@@ -1,0 +1,22 @@
+let data = [];
+for(data in scrappedJobs)
+{	
+
+  let newJob = {
+	Title:data.title,
+Category:data.category,
+.....  
+};
+
+data.push(newJob);
+  
+}
+
+const newData = new Job({
+CompanyName:"Apple",
+DateScrap:Date.now(),
+UID:"apple_1",
+Data:data
+});
+
+newData.save();
