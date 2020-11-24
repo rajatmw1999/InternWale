@@ -57,4 +57,4 @@ async function scrapperHelp(page) {
   });
   return data;
 }
-scrapperGenpact().then((res) => console.log(res));
+module.exports=scrapperGenpact;
