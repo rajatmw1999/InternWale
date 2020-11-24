@@ -18,9 +18,7 @@ async function scraper() {
         try {
           jobJson.title = job.querySelector("a.title.fw500.ellipsis").innerText;
           jobJson.location = job.querySelector("li.location span").innerText;
-          jobJson.description = job.querySelector(
-            "div.job-description"
-          ).innerText;
+          jobJson.desc = job.querySelector("div.job-description").innerText;
 
           var link = job.querySelector("a.title.fw500.ellipsis");
           jobJson.link = link.getAttribute("href");

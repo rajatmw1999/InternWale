@@ -36,7 +36,7 @@ async function scrapperHelp(page) {
             .children[0].children[0].children[1].innerText,
         title: result.children[0].children[0].children[0].children[0].innerText,
         link: result.children[0].children[0].children[2].children[0].href,
-        posted:
+        date:
           result.children[0].children[0].children[1].children[0].children[1]
             .children[0].children[0].children[1].innerText,
       });

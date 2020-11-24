@@ -20,7 +20,7 @@ async function scrapperRSM() {
             tbody.children[0].children[0].children[0].children[0].href;
           const location =
             tbody.children[0].children[2].children[1].textContent;
-          temp.push({ CompanyName: "RSM", nameOfJob, link, location });
+          temp.push({ CompanyName: "RSM", title, link, location });
         }
         return temp;
       },

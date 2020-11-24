@@ -39,7 +39,7 @@ async function scrapperHelp(page) {
           title: result.children[0].children[0].innerText,
           location: result.children[0].children[1].innerText,
           link: result.children[0].href,
-          datePosted: result.children[0].children[2].innerText,
+          date: result.children[0].children[2].innerText,
         });
       }
     );

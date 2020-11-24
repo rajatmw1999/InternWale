@@ -25,14 +25,14 @@ async function scrapperSamsung() {
   const fullData = [];
   for (let i = 0; i < names.length; i++) {
     const title = names[i];
-    const posted = info[i].split("|")[info[i].split("|").length - 1];
+    const date = info[i].split("|")[info[i].split("|").length - 1];
     const location = info[i].split("|").length > 2 ? info[i].split("|")[1] : "";
     const link = `https://sec.wd3.myworkdayjobs.com/Samsung_Careers/0/refreshFacet/318c8bb6f553100021d223d9780d30be`;
     fullData.push({
       CompanyName: "Samsung",
       title,
       location,
-      posted,
+      date,
       link,
     });
   }

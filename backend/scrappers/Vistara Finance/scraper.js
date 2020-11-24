@@ -14,7 +14,7 @@ async function scraper() {
       jobElms.forEach((job) => {
         let jobJson = {};
         try {
-          jobJson.name = job.querySelector(
+          jobJson.title = job.querySelector(
             "span.jobTitle.hidden-phone"
           ).innerText;
           jobJson.location = job

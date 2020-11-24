@@ -22,11 +22,11 @@ async function scrapperHelp(page) {
     const temp = [];
     [...document.querySelectorAll(".classic > div")].map((result) => {
       temp.push({
-        CompaneName: "Pinstorm",
+        CompanyName: "Pinstorm",
         title: result.children[0].children[1].children[1].innerText,
         desc: result.children[0].children[1].children[2].innerText,
         link: result.children[0].children[1].children[1].children[0].href,
-        datePosted: result.children[0].children[1].children[3].innerText,
+        date: result.children[0].children[1].children[3].innerText,
       });
     });
     return temp;

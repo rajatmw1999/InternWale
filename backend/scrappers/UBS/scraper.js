@@ -23,7 +23,7 @@ async function scrapperHelp(page) {
         CompanyName: "UBS",
         title: result.children[1].children[0].innerText,
         link: result.children[1].children[0].children[0].children[0].href,
-        field: result.children[1].children[2].innerText,
+        category: result.children[1].children[2].innerText,
       });
     });
     return temp;
