@@ -1,4 +1,5 @@
 const scrapper = require("../../scrappers/microsoft scraper/scraper");
+const router = require("express").Router();
 const Job = require("../../models/Job");
 const data = [];
 router.get("/h4", function (req, res) {
@@ -9,7 +10,7 @@ router.get("/h4", function (req, res) {
         Category: jobs[i].category,
         DatePosted: jobs[i].date,
         Company: jobs[i].companyName,
-        LinkToJobPosted: jobs[i].link,
+        LinkToJobPost: jobs[i].link,
         JobId: null,
         Description: jobs[i].desc,
         Location: jobs[i].location,

@@ -1,4 +1,5 @@
 const scrapper = require("../../scrappers/Mirum/scraper");
+const router = require("express").Router();
 const Job = require("../../models/Job");
 const data = [];
 router.get("/h5", function (req, res) {
@@ -6,13 +7,13 @@ router.get("/h5", function (req, res) {
     for (let i = 0; i < jobs.length && i < 20; i++) {
       const new_job = {
         Title: jobs[i].title,
-        Category: jobs[i].category,
-        DatePosted: null,
-        Company: jobs[i].companyName,
-        LinkToJobPosted: jobs[i].link,
+        Category: jobs[i].category || null,
+        DatePosted: jobs[i].date || null,
+        Company: jobs[i].companyName || null,
+        LinkToJobPost: jobs[i].link || null,
         JobId: null,
-        Description: null,
-        Location: null,
+        Description: jobs[i].desc || null,
+        Location: jobs[i].location || null,
       };
       data.push(new_job);
     }

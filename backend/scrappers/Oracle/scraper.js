@@ -31,7 +31,7 @@ async function scrapperHelp(page) {
     const temp = [];
     [...document.querySelectorAll("#jobList > li")].map((result) => {
       temp.push({
-        CompanyName: "Oracle",
+        companyName: "Oracle",
         location: result.children[1].children[2].children[0].innerText,
         title: result.children[1].children[0].innerText,
         link: result.children[1].children[0].children[0].children[0].href,

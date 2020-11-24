@@ -1,4 +1,5 @@
 const scrapper = require("../../scrappers/kratikal/scraper");
+const router = require("express").Router();
 const Job = require("../../models/Job");
 const data = [];
 router.get("/h2", function (req, res) {
@@ -6,12 +7,12 @@ router.get("/h2", function (req, res) {
     for (let i = 0; i < jobs.length && i < 20; i++) {
       const new_job = {
         Title: jobs[i].title,
-        Category: jobs[i].category,
-        DatePosted: jobs[i].date,
+        Category: jobs[i].category || null,
+        DatePosted: jobs[i].date || null,
         Company: jobs[i].companyName,
-        LinkToJobPosted: jobs[i].link,
+        LinkToJobPost: jobs[i].link || null,
         JobId: null,
-        Description: null,
+        Description: jobs[i].desc || null,
         Location: jobs[i].location,
       };
       data.push(new_job);

@@ -20,7 +20,7 @@ async function scraper() {
         } catch (exception) {}
         jobs.push({
           companyName: "KPMG",
-          Url:
+          link:
             "https://aa046.taleo.net/careersection/ex/jobsearch.ftl?lang=en&portal=101430233",
           ...jobJson,
         });

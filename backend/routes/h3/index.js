@@ -1,4 +1,4 @@
-//import the route in the folder adummy1 here.
+const router = require("express").Router();
 const scrapper = require("../../scrappers/McKinsey/scraper");
 const Job = require("../../models/Job");
 const data = [];
@@ -10,7 +10,7 @@ router.get("/h3", function (req, res) {
         Category: jobs[i].category,
         DatePosted: jobs[i].date,
         Company: jobs[i].companyName,
-        LinkToJobPosted: jobs[i].link,
+        LinkToJobPost: jobs[i].link,
         JobId: null,
         Description: jobs[i].desc,
         Location: jobs[i].location,

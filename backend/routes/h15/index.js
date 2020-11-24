@@ -1,4 +1,5 @@
 const scrapper = require("../../scrappers/tokio life/scraper");
+const router = require("express").Router();
 const Job = require("../../models/Job");
 const data = [];
 router.get("/h15", function (req, res) {
@@ -9,7 +10,7 @@ router.get("/h15", function (req, res) {
         Category: null,
         DatePosted: null,
         Company: jobs[i].CompanyName,
-        LinkToJobPosted: jobs[i].link,
+        LinkToJobPost: jobs[i].link,
         JobId: null,
         Description: jobs[i].desc || null,
         Location: jobs[i].location,

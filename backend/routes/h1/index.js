@@ -1,4 +1,4 @@
-//import the route in the folder adummy1 here.
+const router = require("express").Router();
 const scrapper = require("../../scrappers/kpmg scraper/scraper");
 const Job = require("../../models/Job");
 const data = [];
@@ -6,14 +6,14 @@ router.get("/h1", function (req, res) {
   scrapper().then((jobs) => {
     for (let i = 0; i < jobs.length && i < 20; i++) {
       const new_job = {
-        Title: jobs[i].title,
-        Category: null,
-        DatePosted: jobs[i].date,
+        Title: jobs[i].title || null,
+        Category: jobs[i].category || null,
+        DatePosted: jobs[i].date || null,
         Company: jobs[i].companyName,
-        LinkToJobPosted: jobs[i].Url,
+        LinkToJobPost: jobs[i].link || null,
         JobId: null,
-        Description: null,
-        Location: jobs[i].location,
+        Description: jobs[i].desc || null,
+        Location: jobs[i].location || null,
       };
       data.push(new_job);
     }

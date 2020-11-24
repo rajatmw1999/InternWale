@@ -1,4 +1,5 @@
 const scrapper = require("../../scrappers/WellsFargo/scraper");
+const router = require("express").Router();
 const Job = require("../../models/Job");
 const data = [];
 router.get("/h21", function (req, res) {
@@ -6,13 +7,13 @@ router.get("/h21", function (req, res) {
     for (let i = 0; i < jobs.length && i < 20; i++) {
       const new_job = {
         Title: jobs[i].title,
-        Category: null,
+        Category: jobs[i].category || null,
         DatePosted: jobs[i].date || null,
         Company: jobs[i].CompanyName,
-        LinkToJobPosted: jobs[i].link,
+        LinkToJobPost: jobs[i].link || null,
         JobId: null,
-        Description: null,
-        Location: jobs[i].location,
+        Description: job[i].desc || null,
+        Location: jobs[i].location || null,
       };
       data.push(new_job);
     }

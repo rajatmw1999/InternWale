@@ -1,4 +1,5 @@
 const scrapper = require("../../scrappers/Vistara Finance/scraper");
+const router = require("express").Router();
 const Job = require("../../models/Job");
 const data = [];
 router.get("/h18", function (req, res) {
@@ -9,7 +10,7 @@ router.get("/h18", function (req, res) {
         Category: null,
         DatePosted: jobs[i].date || null,
         Company: jobs[i].CompanyName,
-        LinkToJobPosted: jobs[i].link,
+        LinkToJobPost: jobs[i].link,
         JobId: null,
         Description: null,
         Location: jobs[i].location,

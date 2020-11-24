@@ -6,13 +6,13 @@ router.get("/h6", function (req, res) {
     for (let i = 0; i < jobs.length && i < 20; i++) {
       const new_job = {
         Title: jobs[i].title,
-        Category: jobs[i].category,
-        DatePosted: jobs[i].date,
-        Company: jobs[i].CompanyName,
-        LinkToJobPosted: jobs[i].link,
+        Category: jobs[i].category || null,
+        DatePosted: jobs[i].date || null,
+        Company: jobs[i].companyName,
+        LinkToJobPost: jobs[i].link || null,
         JobId: null,
-        Description: jobs[i].desc,
-        Location: jobs[i].location,
+        Description: jobs[i].desc || null,
+        Location: jobs[i].location || null,
       };
       data.push(new_job);
     }

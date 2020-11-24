@@ -27,7 +27,7 @@ async function scraper() {
           jobJson.link =
             "https://ms.taleo.net/careersection/2m/moresearch.ftl#";
         } catch (exception) {}
-        jobs.push({ CompanyName: "Morgan Stanley", ...jobJson });
+        jobs.push({ companyName: "Morgan Stanley", ...jobJson });
       });
       return jobs;
     });
