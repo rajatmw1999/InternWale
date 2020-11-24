@@ -18,13 +18,13 @@ async function scrapperPayPal() {
           const title = tbody.children[0].children[0].text;
           const link = tbody.children[0].children[0].href;
           const location = tbody.children[2].children[0].textContent;
-          const dateAdded = tbody.children[3].innerText;
+          const date = tbody.children[3].innerText;
           temp.push({
             CompanyName: "PayPal",
             title,
             link,
             location,
-            dateAdded,
+            date,
           });
         }
         return temp;
