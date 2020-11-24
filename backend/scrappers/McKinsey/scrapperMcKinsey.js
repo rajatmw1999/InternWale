@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 async function scrapperMcKinsey() {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(
     `https://www.mckinsey.com/careers/search-jobs#?countries=India&page=2`
@@ -18,7 +18,14 @@ async function scrapperMcKinsey() {
         const location =
           result.children[0].children[0].children[3].children[1].children[0]
             .innerText;
-        temp.push({ field, nameOfJob, link, desc, location });
+        temp.push({
+          companyName: "McKinsey",
+          field,
+          nameOfJob,
+          link,
+          desc,
+          location,
+        });
       }
       return temp;
     },
@@ -29,3 +36,4 @@ async function scrapperMcKinsey() {
   return data;
 }
 scrapperMcKinsey().then((res) => console.log(res));
+module.exports = scrapperMcKinsey;

@@ -4,42 +4,41 @@ const job_Data = new mongoose.Schema({
   CompanyName: {
     type: String,
   },
-  DateScrap:{
-    type:String,
-    default:Date.now()
+  DateScrap: {
+    type: String,
+    default: Date.now(),
   },
   UID: {
     type: String,
   },
-  Data:
-  [
+  Data: [
     {
-  Title: {
-	type:String
-  },
-  Category: {
-    type: String,
-  },
-  DatePosted: {
-    type: Date,
-  },
-  Company: {
-    type: String,
-  },
-  LinktoJobPost: {
-    type: String,
-  },
-  JobId: {
-    type: String,
-  },
-  Description: {
-    type: String,
-  },
-Location:{
-type:String
-}
-}
-]
+      Title: {
+        type: String,
+      },
+      Category: {
+        type: String,
+      },
+      DatePosted: {
+        type: Date,
+      },
+      Company: {
+        type: String,
+      },
+      LinktoJobPost: {
+        type: String,
+      },
+      JobId: {
+        type: String,
+      },
+      Description: {
+        type: String,
+      },
+      Location: {
+        type: String,
+      },
+    },
+  ],
 });
 
 module.exports = JobData = mongoose.model("JobData", job_Data);
