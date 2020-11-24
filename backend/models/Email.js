@@ -8,6 +8,10 @@ const email_Data = new mongoose.Schema({
   category:{
       type:String,
       default:null
+  }, 
+  active:{
+    type:Boolean,
+    default:true
   }
 });
 
