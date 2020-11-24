@@ -23,7 +23,7 @@ async function scrapper() {
           var link = job.querySelector("a.au-target");
           jobJson.link = link.getAttribute("href");
 
-          jobJson.description = job.querySelector("div.description").innerText;
+          jobJson.desc = job.querySelector("div.description").innerText;
         } catch (exception) {}
         jobs.push(jobJson);
       });

@@ -25,6 +25,7 @@ async function scrapperHelp(page) {
     const temp = [];
     [...document.querySelectorAll(".list > li")].map((result) => {
       temp.push({
+        companyName : "Mirum"
         category: result.children[2].children[0].innerText,
         title: result.children[1].innerText,
         link: result.children[0].href,
