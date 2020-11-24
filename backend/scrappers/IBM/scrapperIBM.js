@@ -37,6 +37,7 @@ async function scrapperHelp(page) {
           link: result.children[0].href,
           field: result.children[0].children[0].children[2].innerText,
           experience: result.children[0].children[0].children[3].innerText,
+          company: "IBM"
         });
       }
     );

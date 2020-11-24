@@ -38,6 +38,7 @@ async function scrapperHelp(page) {
           nameOfJob: result.children[0].children[0].innerText,
           link: result.children[0].href,
           location: result.children[0].children[1].innerText,
+          company: "Barclays"
         });
       }
     );

@@ -41,6 +41,7 @@ async function scraper() {
   let jobs=await extractJobs()
 
   console.log(jobs)
+   return jobs;
 
   await browser.close();
 }

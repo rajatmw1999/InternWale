@@ -40,7 +40,8 @@ async function scrapperHelp(page) {
         const id = result.getAttribute("data-jobid");
         const link = `https://www.db.com/careers/en/prof/role-search/job_search_results.html#JobOpeningId=${id}`;
         const location = result.children[1].children[0].children[0].innerText;
-        temp.push({ nameOfJob, link, location });
+        const company="Deutsche Bank"
+        temp.push({ nameOfJob, link, location, company});
       }
       return temp;
     },

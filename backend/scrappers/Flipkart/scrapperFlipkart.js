@@ -33,6 +33,7 @@ async function scrapperHelp(page) {
         location: result.children[0].children[0].children[1].innerText,
         nameOfJob: result.children[0].children[0].children[0].innerText,
         link: result.children[0].href,
+        company: "Flipkart"
       });
     });
     return temp;

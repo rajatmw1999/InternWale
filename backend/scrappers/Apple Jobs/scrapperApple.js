@@ -20,7 +20,8 @@ async function scrapper(){
             const id = (tbody.id).split("_")[1];
             document.querySelector(`button[data-section-id='${id}']`).click();
             const desc = document.querySelector(`p[id='role_description_${id}']`).children[0].textContent;
-            temp.push({nameOfJob,link,sector,publishedDate,location,desc});
+              const company="Apple";
+            temp.push({nameOfJob,link,sector,publishedDate,location,desc,company});
           }
           return temp;
       },{timeout:0});

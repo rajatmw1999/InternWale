@@ -15,7 +15,8 @@ async function scrapperBDO(){
             const link = tbody.children[0].children[0].href;
             const locationAndDate = tbody.children[1].children[0].textContent;
             const location = locationAndDate.substr(locationAndDate.indexOf("-")+1);
-            temp.push({nameOfJob,link,location});
+            const company="BDO"
+            temp.push({nameOfJob,link,location,company});
           }
           return temp;
       },{timeout:0});

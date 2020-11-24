@@ -67,6 +67,7 @@ async function scrapperHelp(page) {
         location: locations[i],
         field: fields[i],
         posted: datesPosted[i],
+        company: "Credit Suisse"
       });
     }
   }

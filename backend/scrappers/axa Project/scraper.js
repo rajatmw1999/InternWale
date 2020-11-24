@@ -20,6 +20,7 @@ async function scraper () {
                 
                 var link=document.querySelector('a.button-primary.button-primary--blue.animated.pulse.go')
                 jobJson.link= 'https://axaindia.com'.concat(link.getAttribute('href'));
+                jobJson.company="AXA"
                 }
               catch (exception){
       
@@ -40,12 +41,13 @@ async function scraper () {
     
       const jobData= await extractJobs(url)
       if(jobData.length==0){
-          console.log("No job found")
+          jobData="No job found"
+          console.log(jobData)
       }
       else{
           console.log(jobData)
       }
-        
+       return jobData;   
 
       await browser.close();
 }

@@ -29,7 +29,8 @@ async function scrapperHelp(page) {
         const nameOfJob = result.children[0].children[0].innerText;
         const link = result.children[0].href;
         const location = result.children[0].children[1].innerText;
-        temp.push({ nameOfJob, link, location });
+        const company="Citi Bank"
+        temp.push({ nameOfJob, link, location, company });
       }
       return temp;
     },

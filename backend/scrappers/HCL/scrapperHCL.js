@@ -17,7 +17,8 @@ async function scrapperHCL() {
         const location = tbody.children[2].innerText;
         const dateAdded = tbody.children[1].innerText;
         const expReq = tbody.children[3].innerText;
-        temp.push({ nameOfJob, link, location, dateAdded, expReq });
+        const company= "HCL"
+        temp.push({ nameOfJob, link, location, dateAdded, expReq, company});
       }
       return temp;
     },
