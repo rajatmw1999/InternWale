@@ -1,10 +1,8 @@
 const puppeteer = require("puppeteer");
 async function scrapperWellsFargo() {
   const fullData = [];
-  const width = 1024,
-    height = 1600;
   const browser = await puppeteer.launch({
-    defaultViewport: { width, height },
+    defaultViewport: null,
   });
   const page = await browser.newPage();
   await page.goto(
@@ -18,11 +16,14 @@ async function scrapperWellsFargo() {
   while (i <= 15) {
     const data = await scrapperHelp(page);
     data.forEach((el) => fullData.push(el));
-    await page.waitForSelector(".next");
+    await page.waitForSelector(".next").catch(() => {
+      i = 16;
+    });
     await page
       .click(".next")
       .then(() => i++)
       .catch(() => {});
+    await page.waitFor(200);
   }
 
   await browser.close();
