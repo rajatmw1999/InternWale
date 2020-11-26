@@ -4,7 +4,6 @@ async function scrapperHSBC() {
   const width = 1024,
     height = 1600;
   const browser = await puppeteer.launch({
-    headless: false,
     defaultViewport: { width, height },
   });
   const page = await browser.newPage();
@@ -57,4 +56,5 @@ async function scrapperHelp(page) {
   });
   return data;
 }
-scrapperHSBC().then((res) => console.log(res));
+
+module.exports=scrapperHSBC;
