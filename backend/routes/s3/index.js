@@ -1,46 +1,35 @@
-const scraper= require("../scrappers/Barclays/scrapperBarclays.js");
-const scraper= require("./barclaysScraper");
-const app= require("express")();
-const job=require("../models/jobs");
+const router = require("express").Router();
+const scrapper = require("../../scrappers/BCG/scrapperBCG");
+const Job = require("../../models/Job");
+const data = [];
 
-app.get("/s3",(req,res)=>{
-    scraper().then(fullData=>{
-        let dataArray = [];
-        let itr=0;
-        for(data in fullData)
-        {
-            itr++;
-            let newJob = {
-            Title:data.nameOfJob,
-            Category:null,
-            DatePosted: null,
-            Company: data.company,
-            LinktoJobPost: data.link,
-            Description: null,
-            JobId:null,
-            Location:data.location
-            };
-            dataArray.push(newJob);
-            if(itr==20){
-            break;
-            }
-        }
-
-        const newData = new job({
-        CompanyName:"Barclays",
-        DateScrap:Date.now(),
-        UID:"barclays_3",
-        Data:dataArray
-        });
-
-        newData.save();
-        console.log("data saved in dataBase");
-
-    })
+router.get("/s3", async (req, res)=> {
+  let data = [];
+  await scrapper().then((jobs) => {
+    for(let i = 0; i < jobs.length && i < 20; i++) {
+      const new_job = {
+        Title: jobs[i].nameOfJob || null,
+        Category: jobs[i].sector || null,
+        DatePosted: jobs[i].publishedDate || null,
+        Company: jobs[i].company,
+        LinktoJobPost: jobs[i].link || null,
+        JobId: null,
+        Description: jobs[i].desc || null,
+        Location: jobs[i].location || null,
+      };
+      data.push(new_job);
+    }
+  })
+  .then(async (ans)=>{
+    const newData = await new Job({
+      CompanyName: "BCG",
+      DateScrap: Date.now(),
+      UID: "bcg_3",
+      Data: data,
+    });
+    console.log(newData)
+    
+  });
 });
 
-// app.listen(3000,(req,res)=>{
-//     console.log("app listening at http://localhost:3000")
-// })
-
-module.exports=app;
+module.exports = router;
