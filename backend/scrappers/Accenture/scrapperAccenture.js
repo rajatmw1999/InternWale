@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 async function scrapperAccenture() {
   let fullData = [];
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(
     `https://www.accenture.com/in-en/careers/jobsearch?src=PSEARCH&jk=&sb=1`,
@@ -45,4 +45,5 @@ async function scrapperAccenture() {
   await browser.close();
   return fullData;
 }
-scrapperAccenture().then((res) => console.log(res));
+
+module.exports = scrapperAccenture;
