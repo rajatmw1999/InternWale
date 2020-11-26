@@ -28,7 +28,7 @@ router.get("/h20", function (req, res) {
       });
 
       newData.save();
-      res.redirect("/scrap/data/h22");
+      res.redirect("/scrap/data/h21");
       console.log("Scrapped 20");
     });
 });

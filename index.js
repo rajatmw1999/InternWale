@@ -14,7 +14,7 @@ const nodemailer = require("nodemailer");
 //   .then(() => console.log("MongoDB Connected..."))
 //   .catch((err) => console.log(err));
 mongoose.connect(
-  "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/mediumPostCounter?retryWrites=true&w=majority",
+  "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/jobsSkillUnga?retryWrites=true&w=majority",
   {
     //useMongoClient: true
     useNewUrlParser: true,
@@ -38,9 +38,11 @@ app.use((req, res, next) => {
 
 const emailRoute = require("./backend/api/email");
 const jobsRoute = require("./backend/api/jobs");
+const emailSendRoute = require("./backend/api/functions/sendEmail");
 
 app.use("/api/email", emailRoute);
 app.use("/api/jobs", jobsRoute);
+app.use("/api/email", emailSendRoute);
 
 const h1 = require("./backend/routes/h1/index");
 const h2 = require("./backend/routes/h2/index");
@@ -178,7 +180,7 @@ app.use((error, req, res, next) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server is running on port 3000");
 });
 

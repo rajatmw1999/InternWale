@@ -2,9 +2,9 @@ const scrapper = require("../../scrappers/WellsFargo/scraper");
 const router = require("express").Router();
 const Job = require("../../models/Job");
 const data = [];
-router.get("/h21", function (req, res) {
-  scrapper()
-    .then((jobs) => {
+router.get("/h21", async (req, res)=> {
+  await scrapper()
+    .then(async (jobs) => {
       for (let i = 0; i < jobs.length && i < 20; i++) {
         const new_job = {
           Title: jobs[i].title,
@@ -19,7 +19,7 @@ router.get("/h21", function (req, res) {
         data.push(new_job);
       }
     })
-    .then((ans) => {
+    .then(async (ans) => {
       const newData = new Job({
         CompanyName: "WellsFargo",
         DateScrap: Date.now(),
@@ -27,9 +27,11 @@ router.get("/h21", function (req, res) {
         Data: data,
       });
 
-      newData.save();
-      res.redirect("/scrap/data/h22");
+      await newData.save();
+      // console.log(newData);
       console.log("Scrapped 21");
+      res.redirect("/scrap/data/h22");
+      
     });
 });
 module.exports = router;

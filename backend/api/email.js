@@ -4,6 +4,23 @@ const express = require('express');
 const router = express.Router();
 const {emailOfCategory} = require('./functions/emailFunction');
 
+//IMPORTING AND CONFIURING NODEMAILER----------------------------------
+let nodemailer = require("nodemailer");
+const email = "skillunga.official@gmail.com";
+const emailArray = [
+    "rajatis1999@gmail.com",
+  ];
+  // NODEMAILER CONFIG
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: email,
+      pass: "Skillunga2020",
+    },
+  });
+//-----------------------------------------------------------------
+
+
 //GET ALL THE EMAILS STORED INSIDE THE LIST
 router.get('/all', async(req, res) => {
     EmailData.find({}, async(err, ans) => {
@@ -33,6 +50,25 @@ router.post('/new', async(req, res) => {
                 category:category
             });
             await newEmail.save();
+
+            
+                // NODEMAILER OPTIONS START-----------------------------------------------------------------------
+                var mailOptions = {
+                  from: 'SkillUnga Official <skillunga.official@gmail.com>',
+                  to: email,
+                  subject: "Your Welcome Gift from SkillUnga!",
+                  html : { path: 'backend/api/email.html' }
+
+                };
+                await transporter.sendMail(mailOptions, function (error, info) {
+                  if (error) {
+                    console.log(error);
+                  } else {
+                    console.log("Email sent: " + info.response);
+                  }
+                });
+                //NODEMAILER OPTIONS END--------------------------------------------------------------------------
+
             return res.status(200).json({
                 status:200,
                 message:"Email has been added to the list."

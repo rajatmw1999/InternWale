@@ -1,30 +1,33 @@
 const router = require("express").Router();
 let nodemailer = require("nodemailer");
-const email = "chachav821@gmail.com";
+const email = "skillunga.official@gmail.com";
 
 const emailArray = [
-  "krish988kr@tapi.re",
-  "salim739khan@magim.be",
-  "lana797rose@sika3.com",
+  "rajatis1999@gmail.com",
 ];
 // NODEMAILER CONFIG
 var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: email,
-    pass: "incampus_temp",
+    pass: "Skillunga2020",
   },
 });
-router.get("/email/sendemail", (req, res) => {
+router.get("/sendemail/:email", async(req, res) => {
   for (let i = 0; i < emailArray.length; i++) {
     // NODEMAILER OPTIONS
     var mailOptions = {
-      from: email,
+      from: 'SkillUnga Official <skillunga.official@gmail.com>',
       to: emailArray[i],
-      subject: "test",
-      text: " TEST TO CHECK IF EMAIL IS BEING SENT",
+      subject: "Our Welcome Gift!",
+      html : { path: 'backend/api/functions/email.html' },
+      attachments: [{
+        filename: 'logo.png',
+        path: 'backend/api/functions/images/logo.png',
+        cid: 'logo' //same cid value as in the html img src
+}]
     };
-    transporter.sendMail(mailOptions, function (error, info) {
+    await transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         console.log(error);
       } else {
@@ -32,5 +35,6 @@ router.get("/email/sendemail", (req, res) => {
       }
     });
   }
+  res.send("Email sent.");
 });
 module.exports = router;
