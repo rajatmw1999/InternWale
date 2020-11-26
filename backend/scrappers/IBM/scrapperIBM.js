@@ -1,8 +1,6 @@
 const puppeteer = require("puppeteer");
 async function scrapperIBM() {
-  const fullData = [];
   const browser = await puppeteer.launch({
-    headless: false,
     defaultViewport: null,
   });
 
@@ -13,20 +11,6 @@ async function scrapperIBM() {
       timeout: 0,
     }
   );
-  let i = 1;
-  while (i <= 241) {
-    await page.waitForSelector("#jobs-cards-wrapper > div");
-    await scrapperHelp(page).then((data) => {
-      data.forEach((el) => fullData.push(el));
-      i++;
-    });
-    await page.click("#next-jobs-page");
-  }
-  await browser.close();
-  return fullData;
-}
-
-async function scrapperHelp(page) {
   const data = await page.evaluate(() => {
     const temp = [];
     [...document.querySelectorAll("#jobs-cards-wrapper > div")].map(
@@ -43,6 +27,9 @@ async function scrapperHelp(page) {
     );
     return temp;
   });
+  
+  await browser.close();
   return data;
 }
-scrapperIBM().then((res) => console.log(res));
+
+module.exports=scrapperIBM;

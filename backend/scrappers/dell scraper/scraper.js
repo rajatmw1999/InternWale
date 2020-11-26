@@ -40,10 +40,10 @@ async function scraper() {
 
   let jobs=await extractJobs()
 
-  console.log(jobs)
-   return jobs;
-
+  // console.log(jobs)
   await browser.close();
+
+   return jobs;
 }
 
 module.exports= scraper;

@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 async function scrapperCreditSuisse() {
   const fullData = [];
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(
     `https://tas-creditsuisse.taleo.net/careersection/external_advsearch/moresearch.ftl?lang=en`,
@@ -23,7 +23,7 @@ async function scrapperCreditSuisse() {
   await browser.close();
   return fullData;
 }
-scrapperCreditSuisse().then((res) => console.log(res));
+module.exports=scrapperCreditSuisse;
 
 const isElementVisible = async (page, cssSelector) => {
   let visible = true;

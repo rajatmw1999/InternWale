@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 async function scrapperBCG() {
   let fullData = [];
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(
     `https://talent.bcg.com/en_US/apply/SearchJobs/?3_131_3=%5B%2235972761%22%5D`,
@@ -37,5 +37,4 @@ async function scrapperBCG() {
   await browser.close();
   return fullData;
 }
-// module.exports = scrapperHCL;
-scrapperBCG().then((res) => console.log(res));
+module.exports=scrapperBCG;

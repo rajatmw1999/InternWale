@@ -52,9 +52,9 @@ async function scraper (){
       const url="https://www.naukri.com/icici-prudential-jobs"
     
       const jobData= await extractJobs(url)
-      console.log(jobData)
-        return jobData;
+      // console.log(jobData)
       await browser.close();
+      return jobData;
 }
 
 module.exports=scraper;

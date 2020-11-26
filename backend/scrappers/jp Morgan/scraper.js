@@ -38,9 +38,9 @@ async function scraper (){
       const url="https://careers.jpmorgan.com/us/en/students/programs"
     
       const jobData= await extractJobs(url)
-      console.log(jobData)
-       return jobData;
-
+      // console.log(jobData)
+      
       await browser.close();
+      return jobData;
 }
 module.exports=scraper;

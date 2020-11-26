@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 async function scrapperHCL() {
   let fullData = [];
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(`https://www.hcltech.com/careers/Careers-in-india`, {
     timeout: 0,
@@ -31,5 +31,4 @@ async function scrapperHCL() {
   await browser.close();
   return fullData;
 }
-// module.exports = scrapperHCL;
-scrapperHCL().then((res) => console.log(res));
+module.exports = scrapperHCL;

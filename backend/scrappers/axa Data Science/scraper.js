@@ -40,14 +40,14 @@ async function scraper (){
       const url="https://axaindia.com/job-search/10/data-scientists-and-analysts"
     
       const jobData= await extractJobs(url)
-      if(jobData.length==0){
-          console.log("No job found")
-      }
-      else{
-          console.log(jobData)
-      }
-        return jobData;
+      // if(jobData.length==0){
+      //     console.log("No job found")
+      // }
+      // else{
+      //     console.log(jobData)
+      // }
       await browser.close();
+        return jobData;
 }
 
 module.exports=scraper;

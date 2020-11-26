@@ -56,10 +56,9 @@ async function scraper (){
       const url="https://careers.google.com/jobs/results/?company=Google&company=Google%20Fiber&company=YouTube&employment_type=FULL_TIME&employment_type=PART_TIME&employment_type=TEMPORARY&employment_type=INTERN&hl=en_US&jlo=en_US&location=India&q=&sort_by=relevance"
     
       const jobData= await extractJobs(url)
-      console.log(jobData)
-        return jobData;
-
+      // console.log(jobData)
       await browser.close();
+        return jobData;
 }
 
 module.exports=scraper;
