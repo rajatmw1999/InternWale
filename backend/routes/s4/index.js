@@ -1,46 +1,35 @@
-const scraper= require("../scrappers/BCG/scrapperBCG.js");
-const app= require("express")();
-const job=require("../models/jobs");
+const router = require("express").Router();
+const scrapper = require("../../scrappers/BDO/scrapperBDO");
+const Job = require("../../models/Job");
+const data = [];
 
-
-app.get("/s4",(req,res)=>{
-    scraper().then(fullData=>{
-        let dataArray = [];
-        let itr=0;
-        for(d in fullData)
-        {
-            itr++;
-            let newJob = {
-            Title:d.nameOfJob,
-            Category:null,
-            DatePosted: d.datePosted,
-            Company: d.company,
-            LinktoJobPost: d.link,
-            Description: d.desc,
-            JobId:null,
-            Location:d.location
-            };
-            dataArray.push(newJob);
-            if(itr==20){
-            break;
-            }
-        }
-
-        const newData = new job({
-        CompanyName:"BCG",
-        DateScrap:Date.now(),
-        UID:"BCG_4",
-        Data:dataArray
-        });
-
-        newData.save();
-        console.log("data saved in database")
-
-    })
+router.get("/s4", async (req, res)=> {
+  let data = [];
+  await scrapper().then((jobs) => {
+    for(let i = 0; i < jobs.length && i < 20; i++) {
+      const new_job = {
+        Title: jobs[i].nameOfJob || null,
+        Category: jobs[i].sector || null,
+        DatePosted: jobs[i].publishedDate || null,
+        Company: jobs[i].company,
+        LinktoJobPost: jobs[i].link || null,
+        JobId: null,
+        Description: jobs[i].desc || null,
+        Location: jobs[i].location || null,
+      };
+      data.push(new_job);
+    }
+  })
+  .then(async (ans)=>{
+    const newData = await new Job({
+      CompanyName: "BDO",
+      DateScrap: Date.now(),
+      UID: "bdo_4",
+      Data: data,
+    });
+    console.log(newData)
+    
+  });
 });
 
-// app.listen(3000,(req,res)=>{
-//     console.log("app listening at http://localhost:3000")
-// })
-
-module.exports=app;
+module.exports = router;
