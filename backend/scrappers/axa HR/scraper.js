@@ -40,15 +40,15 @@ async function scraper () {
       const url="https://axaindia.com/job-search/13/human-resources"
     
       const jobData= await extractJobs(url)
-      if(jobData.length==0){
-          jobData="No job found"
-          console.log(jobData)
-      }
-      else{
-          console.log(jobData)
-      }
-       return jobData; 
+      // if(jobData.length==0){
+      //     jobData="No job found"
+      //     console.log(jobData)
+      // }
+      // else{
+      //     console.log(jobData)
+      // }
       await browser.close();
+       return jobData; 
 }
 
 module.exports=scraper;

@@ -40,15 +40,15 @@ async function scraper() {
       const url="https://axaindia.com/job-search/12/finance-and-accounting"
     
       const jobData= await extractJobs(url)
-      if(jobData.length==0){
-          console.log("No job found")
-      }
-      else{
-          console.log(jobData)
-      }
+      // if(jobData.length==0){
+      //     console.log("No job found")
+      // }
+      // else{
+      //     console.log(jobData)
+      // }
     
-        return jobData;
       await browser.close();
+        return jobData;
 }
 
 module.exports=scraper;

@@ -40,15 +40,15 @@ async function scraper () {
       const url="https://axaindia.com/job-search/16/legal-and-compliance"
     
       const jobData= await extractJobs(url)
-      if(jobData.length==0){
-          jobData="No job found"
-          console.log(jobData)
-      }
-      else{
-          console.log(jobData)
-      }
-       return jobData; 
+      // if(jobData.length==0){
+      //     jobData="No job found"
+      //     console.log(jobData)
+      // }
+      // else{
+      //     console.log(jobData)
+      // }
       await browser.close();
+       return jobData; 
 }
 
 module.exports=scraper;

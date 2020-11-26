@@ -40,16 +40,16 @@ async function scraper () {
       const url="https://axaindia.com/job-search/20/project-and-program-management"
     
       const jobData= await extractJobs(url)
-      if(jobData.length==0){
-          jobData="No job found"
-          console.log(jobData)
-      }
-      else{
-          console.log(jobData)
-      }
+      // if(jobData.length==0){
+      //     jobData="No job found"
+      //     console.log(jobData)
+      // }
+      // else{
+      //     console.log(jobData)
+      // }
+      await browser.close();
        return jobData;   
 
-      await browser.close();
 }
 
 module.exports=scraper;

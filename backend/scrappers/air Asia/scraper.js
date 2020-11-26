@@ -38,15 +38,15 @@ async function scraper () {
       const url="https://airasia.eightfold.ai/careers?pid=1516857&location=Bengaluru%20-%20Alpha%203%2C%20India&domain=airasia.com"
     
       const jobData= await extractJobs(url)
-      if(jobData.length==0){
-          console.log("No jobs available");
-      }
-      else{
-          console.log(jobData)
-      }
+      // if(jobData.length==0){
+      //     console.log("No jobs available");
+      // }
+      // else{
+      //     console.log(jobData)
+      // }
         
-      return jobData;
       await browser.close();
+      return jobData;
 }
 
 module.exports=scraper;
