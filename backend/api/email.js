@@ -59,7 +59,60 @@ router.post('/new', async(req, res) => {
                   from: 'SkillUnga Official <skillunga.official@gmail.com>',
                   to: email,
                   subject: "Your Welcome Gift from SkillUnga!",
-                  html : { path: 'backend/api/email.html' }
+                  html : { path: __dirname + '/functions/finalemail/index.html' },
+                  attachments: [
+                    {
+                        filename: 'pablita-delivery.png',
+                        path: __dirname + '/functions/finalemail/images/pablita-delivery.png',
+                        cid: 'delivery' //same cid value as in the html img src
+                    },
+                    {
+                        filename: 'logo-home.png',
+                        path: __dirname + '/functions/finalemail/images/logo-home.png',
+                        cid: 'logo' //same cid value as in the html img src
+                    },
+                    {
+                        filename: 'icon_feature1.png',
+                        path: __dirname + '/functions/finalemail/images/icon_feature1.png',
+                        cid: 'feature1' //same cid value as in the html img src
+                    },
+                    {
+                        filename: 'icon_feature2.png',
+                        path: __dirname + '/functions/finalemail/images/icon_feature2.png',
+                        cid: 'feature2' //same cid value as in the html img src
+                    },
+                    {
+                        filename: 'icon_feature3.png',
+                        path: __dirname + '/functions/finalemail/images/icon_feature3.png',
+                        cid: 'feature3' //same cid value as in the html img src
+                    },
+                    {
+                        filename: 'icon_feature4.png',
+                        path: __dirname + '/functions/finalemail/images/icon_feature4.png',
+                        cid: 'feature4' //same cid value as in the html img src
+                    },
+                    {
+                        filename: 'jobs.a2611c9d.png',
+                        path: __dirname + '/functions/finalemail/images/jobs.a2611c9d.png',
+                        cid: 'jobs' //same cid value as in the html img src
+                    },
+                    {
+                        filename: 'logo-homef.png',
+                        path: __dirname + '/functions/finalemail/images/logo-homef.png',
+                        cid: 'logof' //same cid value as in the html img src
+                    },
+                    {
+                        filename: 'instagram2x.png',
+                        path: __dirname + '/functions/finalemail/images/instagram2x.png',
+                        cid: 'instagram' //same cid value as in the html img src
+                    },
+                    {
+                        filename: 'linkedin2x.png',
+                        path: __dirname + '/functions/finalemail/images/linkedin2x.png',
+                        cid: 'linkedin' //same cid value as in the html img src
+                    },
+                    
+            ]
 
                 };
                 await transporter.sendMail(mailOptions, function (error, info) {
