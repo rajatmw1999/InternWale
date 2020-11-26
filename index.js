@@ -155,6 +155,10 @@ app.use("/rescrap/data", h1Copy);
 const emailSend = require("./backend/api/functions/sendEmail");
 app.use("/test", emailSend);
 
+app.get('/cronjobs', async(req, res)=>{
+  return res.send("Cron Jobs");
+});
+
 // app.get('/c', async(req, res)=>{
 //   var d= new Date(Date.now()-6000000000)
 //   return res.send("Date = " + d);

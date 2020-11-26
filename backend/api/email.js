@@ -45,6 +45,8 @@ router.post('/new', async(req, res) => {
             return res.send("This email already exists.");
         else
         {
+            if(category.length == 0)
+                category = null;
             const newEmail = await new EmailData({
                 email:email,
                 category:category
