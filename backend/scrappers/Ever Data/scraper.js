@@ -39,12 +39,12 @@ async function scraper(){
       const url="https://www.everdata.com/jobs"
     
       const jobData= await extractJobs(url)
-      if(jobData.length==0){
-          console.log("No jobs available");
-      }
-      else{
-          console.log(jobData)
-      }
+      // if(jobData.length==0){
+      //     console.log("No jobs available");
+      // }
+      // else{
+      //     console.log(jobData)
+      // }
       await browser.close();
       return jobData
 }

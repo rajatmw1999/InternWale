@@ -1,25 +1,11 @@
 const puppeteer = require("puppeteer");
 async function scrapperCiti() {
-  const fullData = [];
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(
-    `https://jobs.citi.com/search-jobs/India/287/2/1269750/22/79/50/2`
+    `https://jobs.citi.com/search-jobs/India/287/2/1269750/22/79/50/2`,{waitUntil:"networkidle2"}
   );
-  let i = 1;
-  while (i <= 36) {
-    const data = await scrapperHelp(page);
-    for (let j = 0; j < data.length; j++) fullData.push(data[j]);
-    await page.click(".next", { waitUntil: "load" }).then(() => i++);
-  }
 
-  await browser.close();
-  return fullData;
-}
-scrapperCiti().then((res) => console.log(res));
-
-async function scrapperHelp(page) {
-  await page.waitForSelector("#search-results-list");
   const data = await page.evaluate(
     () => {
       const temp = [];
@@ -36,5 +22,9 @@ async function scrapperHelp(page) {
     },
     { timeout: 0 }
   );
+  
+
+  await browser.close();
   return data;
 }
+module.exports=scrapperCiti;

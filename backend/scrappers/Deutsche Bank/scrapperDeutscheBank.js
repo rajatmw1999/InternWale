@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 async function scrapperDeutscheBank() {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(
     `https://www.db.com/careers/en/prof/role-search/job_search_results.html#country=81`,
@@ -17,8 +17,7 @@ async function scrapperDeutscheBank() {
   await browser.close();
   return data;
 }
-scrapperDeutscheBank().then((res) => console.log(res));
-
+module.exports=scrapperDeutscheBank;
 const isElementVisible = async (page, cssSelector) => {
   let visible = true;
   await page
@@ -47,6 +46,6 @@ async function scrapperHelp(page) {
     },
     { timeout: 0 }
   );
-  console.log(data.length);
+  // console.log(data.length);
   return data;
 }

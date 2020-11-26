@@ -6,6 +6,7 @@ async function scraper() {
 
         const page = await browser.newPage();
         await page.goto(url,{waitUntil:"networkidle2"});
+        
 
         // console.log(url)
 
@@ -33,32 +34,20 @@ async function scraper() {
             return jobs;
             
           });
-       
-          if(jobData.length<10){
-              return jobData;
-          }else{
-              if(url.length==86){
-                let nextUrl= 'https://eygbl.referrals.selectminds.com/experienced-opportunities/jobs/search/96405337'.concat("/page2");
-                return jobData.concat(await extractJobs(nextUrl))
-              }else{
-                let number= url.lastIndexOf('e');
-                let sub=parseInt(url.substring(number+1));
-                let nextUrl='https://eygbl.referrals.selectminds.com/experienced-opportunities/jobs/search/96405337/page'.concat(sub+1);
-                return jobData.concat(await extractJobs(nextUrl))
-              }
-          }
-
+          return jobData;
 
     }
 
   const browser = await puppeteer.launch();
   
     let firstUrl='https://eygbl.referrals.selectminds.com/experienced-opportunities/jobs/search/96405337';
-
+    let secondUrl='https://eygbl.referrals.selectminds.com/experienced-opportunities/jobs/search/96405337/page2'
+    
     let jobs=await extractJobs(firstUrl);
-  console.log(jobs)
-return jobs;
+    jobs.concat(await extractJobs(secondUrl));
+  // console.log(jobs)
   await browser.close();
+  return jobs;
 }
 
 module.exports= scraper;

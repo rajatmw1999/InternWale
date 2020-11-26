@@ -2,7 +2,6 @@ const puppeteer = require("puppeteer");
 async function scrapperFlipkart() {
   const fullData = [];
   const browser = await puppeteer.launch({
-    headless: false,
     defaultViewport: null,
   });
 
@@ -40,4 +39,5 @@ async function scrapperHelp(page) {
   });
   return data;
 }
-scrapperFlipkart().then((res) => console.log(res));
+
+module.exports=scrapperFlipkart;
