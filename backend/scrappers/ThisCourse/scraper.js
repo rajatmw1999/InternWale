@@ -22,9 +22,9 @@ async function scrapperHelp(page) {
     const temp = [];
     [...document.querySelectorAll("body > div > div")].map((result) => {
       temp.push({
-        location: result.children[1].innerText.split(".")[0],
         title: result.children[0].innerText,
-        link: result.children[1].innerText.split(".")[1],
+        link: result.children[1].innerText.split(".")[0],
+        desc: result.children[1].innerText.split(".")[1],
       });
     });
     return temp;
