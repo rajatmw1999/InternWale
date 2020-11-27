@@ -4,7 +4,7 @@ async function scrapperBDO(){
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   let i = 1;
-  while(i <= 5){
+  while(i <= 2){
     await page.goto(`https://www.bdo.in/en-gb/careers/jobs?level=1&page=${i}`,{timeout:0});
   
       const data = await page.evaluate(() => {

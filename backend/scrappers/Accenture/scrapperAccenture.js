@@ -11,7 +11,7 @@ async function scrapperAccenture() {
     }
   );
   let i = 1;
-  while (i <= 854) {
+  while (i <= 30) {
     const data = await page.evaluate(
       () => {
         const temp = [];
