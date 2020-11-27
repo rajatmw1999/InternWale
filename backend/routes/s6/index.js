@@ -28,6 +28,8 @@ router.get("/s6", async (req, res)=> {
       Data: data,
     });
     console.log(newData)
+    await newData.save();
+
     
   });
 });

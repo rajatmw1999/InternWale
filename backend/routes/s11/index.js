@@ -27,6 +27,8 @@ router.get("/s11", async (req, res)=> {
       UID: "genpact_11",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

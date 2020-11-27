@@ -27,6 +27,8 @@ router.get("/s8", async (req, res)=> {
       UID: "deutscheBank_8",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

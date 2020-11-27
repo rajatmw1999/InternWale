@@ -27,6 +27,8 @@ router.get("/s10", async (req, res)=> {
       UID: "flipkart_10",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

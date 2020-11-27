@@ -27,6 +27,8 @@ router.get("/s9", async (req, res)=> {
       UID: "everData_9",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

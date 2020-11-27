@@ -27,6 +27,8 @@ router.get("/s13", async (req, res)=> {
       UID: "hsbc_13",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

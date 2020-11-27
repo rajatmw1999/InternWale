@@ -27,6 +27,8 @@ router.get("/s24", async (req, res)=> {
       UID: "cognizant_24",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

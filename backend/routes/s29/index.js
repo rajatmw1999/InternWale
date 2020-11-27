@@ -27,6 +27,8 @@ router.get("/s29", async (req, res)=> {
       UID: "intel_29",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

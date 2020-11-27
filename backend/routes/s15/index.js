@@ -27,6 +27,8 @@ router.get("/s15", async (req, res)=> {
       UID: "icici_15",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

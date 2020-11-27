@@ -27,6 +27,8 @@ router.get("/s14", async (req, res)=> {
       UID: "ibm_14",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });
