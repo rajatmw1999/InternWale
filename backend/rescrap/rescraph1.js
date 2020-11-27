@@ -10,8 +10,7 @@ const CompanyName = "This Course";
 function isEqual(storedJob, newJob) {
   if (
     storedJob.Title === newJob.Title &&
-    storedJob.LinktoJobPost === newJob.LinktoJobPost &&
-    storedJob.DatePosted === newJob.DatePosted
+    storedJob.LinktoJobPost === newJob.LinktoJobPost
   ) {
     return true;
   }
