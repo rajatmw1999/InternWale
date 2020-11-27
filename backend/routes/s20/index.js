@@ -27,6 +27,8 @@ router.get("/s20", async (req, res)=> {
       UID: "axa_20",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

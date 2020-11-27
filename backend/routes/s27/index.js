@@ -27,6 +27,8 @@ router.get("/s27", async (req, res)=> {
       UID: "google_27",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

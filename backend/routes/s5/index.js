@@ -28,6 +28,7 @@ router.get("/s5", async (req, res)=> {
       Data: data,
     });
     console.log(newData)
+    await newData.save();
     
   });
 });

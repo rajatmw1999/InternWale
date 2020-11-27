@@ -27,6 +27,8 @@ router.get("/s28", async (req, res)=> {
       UID: "airAsia_28",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

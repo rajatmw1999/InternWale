@@ -27,6 +27,8 @@ router.get("/s25", async (req, res)=> {
       UID: "dell_25",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });

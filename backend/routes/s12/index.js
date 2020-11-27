@@ -27,6 +27,8 @@ router.get("/s12", async (req, res)=> {
       UID: "hcl_12",
       Data: data,
     });
+    await newData.save();
+
     console.log(newData)
     
   });
