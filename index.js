@@ -3,24 +3,24 @@ const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-const URI = `mongodb+srv://user:s3oTPRp8I89vZ6qC@cluster0.r2ehn.mongodb.net/Jobs?retryWrites=true&w=majority`;
-mongoose
-  .connect(URI, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB Connected..."))
-  .catch((err) => console.log(err));
-// mongoose.connect(
-//   "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/jobsSkillUnga?retryWrites=true&w=majority",
-//   {
-//     //useMongoClient: true
+// const URI = `mongodb+srv://user:s3oTPRp8I89vZ6qC@cluster0.r2ehn.mongodb.net/Jobs?retryWrites=true&w=majority`;
+// mongoose
+//   .connect(URI, {
 //     useNewUrlParser: true,
+//     useCreateIndex: true,
 //     useUnifiedTopology: true,
-//   },
-//   console.log("Database Connected")
-// );
+//   })
+//   .then(() => console.log("MongoDB Connected..."))
+//   .catch((err) => console.log(err));
+mongoose.connect(
+  "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/jobsSkillUnga?retryWrites=true&w=majority",
+  {
+    //useMongoClient: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  console.log("Database Connected")
+);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -90,66 +90,66 @@ app.use("/scrap/data", h3);
 app.use("/scrap/data", h1);
 app.use("/scrap/data", h2);
 
-// const s1 = require("./backend/routes/s1/index");
-// const s2 = require("./backend/routes/s2/index");
-// const s3 = require("./backend/routes/s3/index");
-// const s4 = require("./backend/routes/s4/index");
-// const s5 = require("./backend/routes/s5/index");
-// const s6 = require("./backend/routes/s6/index");
-// const s7 = require("./backend/routes/s7/index");
-// const s8 = require("./backend/routes/s8/index");
-// const s9 = require("./backend/routes/s9/index");
-// const s10 = require("./backend/routes/s10/index");
-// const s11 = require("./backend/routes/s11/index");
-// const s12 = require("./backend/routes/s12/index");
-// const s13 = require("./backend/routes/s13/index");
-// const s14 = require("./backend/routes/s14/index");
-// const s15 = require("./backend/routes/s15/index");
-// const s16 = require("./backend/routes/s16/index");
-// const s17 = require("./backend/routes/s17/index");
-// const s18 = require("./backend/routes/s18/index");
-// const s19 = require("./backend/routes/s19/index");
-// const s20 = require("./backend/routes/s20/index");
-// const s21 = require("./backend/routes/s21/index");
-// const s22 = require("./backend/routes/s22/index");
-// const s23 = require("./backend/routes/s23/index");
-// const s24 = require("./backend/routes/s24/index");
-// const s25 = require("./backend/routes/s25/index");
-// const s26 = require("./backend/routes/s26/index");
-// const s27 = require("./backend/routes/s27/index");
-// const s28 = require("./backend/routes/s28/index");
-// const s29 = require("./backend/routes/s29/index");
-// const s30 = require("./backend/routes/s30/index");
-// app.use("/scrap/data", s30);
-// app.use("/scrap/data", s29);
-// app.use("/scrap/data", s28);
-// app.use("/scrap/data", s27);
-// app.use("/scrap/data", s26);
-// app.use("/scrap/data", s25);
-// app.use("/scrap/data", s24);
-// app.use("/scrap/data", s23);
-// app.use("/scrap/data", s22);
-// app.use("/scrap/data", s21);
-// app.use("/scrap/data", s20);
-// app.use("/scrap/data", s19);
-// app.use("/scrap/data", s18);
-// app.use("/scrap/data", s17);
-// app.use("/scrap/data", s16);
-// app.use("/scrap/data", s15);
-// app.use("/scrap/data", s14);
-// app.use("/scrap/data", s13);
-// app.use("/scrap/data", s12);
-// app.use("/scrap/data", s11);
-// app.use("/scrap/data", s10);
-// app.use("/scrap/data", s9);
-// app.use("/scrap/data", s8);
-// app.use("/scrap/data", s7);
-// app.use("/scrap/data", s6);
-// app.use("/scrap/data", s5);
-// app.use("/scrap/data", s4);
-// app.use("/scrap/data", s3);
-// app.use("/scrap/data", s2);
-// app.use("/scrap/data", s1);
+const s1 = require("./backend/routes/s1/index");
+const s2 = require("./backend/routes/s2/index");
+const s3 = require("./backend/routes/s3/index");
+const s4 = require("./backend/routes/s4/index");
+const s5 = require("./backend/routes/s5/index");
+const s6 = require("./backend/routes/s6/index");
+const s7 = require("./backend/routes/s7/index");
+const s8 = require("./backend/routes/s8/index");
+const s9 = require("./backend/routes/s9/index");
+const s10 = require("./backend/routes/s10/index");
+const s11 = require("./backend/routes/s11/index");
+const s12 = require("./backend/routes/s12/index");
+const s13 = require("./backend/routes/s13/index");
+const s14 = require("./backend/routes/s14/index");
+const s15 = require("./backend/routes/s15/index");
+const s16 = require("./backend/routes/s16/index");
+const s17 = require("./backend/routes/s17/index");
+const s18 = require("./backend/routes/s18/index");
+const s19 = require("./backend/routes/s19/index");
+const s20 = require("./backend/routes/s20/index");
+const s21 = require("./backend/routes/s21/index");
+const s22 = require("./backend/routes/s22/index");
+const s23 = require("./backend/routes/s23/index");
+const s24 = require("./backend/routes/s24/index");
+const s25 = require("./backend/routes/s25/index");
+const s26 = require("./backend/routes/s26/index");
+const s27 = require("./backend/routes/s27/index");
+const s28 = require("./backend/routes/s28/index");
+const s29 = require("./backend/routes/s29/index");
+const s30 = require("./backend/routes/s30/index");
+app.use("/scrap/data", s30);
+app.use("/scrap/data", s29);
+app.use("/scrap/data", s28);
+app.use("/scrap/data", s27);
+app.use("/scrap/data", s26);
+app.use("/scrap/data", s25);
+app.use("/scrap/data", s24);
+app.use("/scrap/data", s23);
+app.use("/scrap/data", s22);
+app.use("/scrap/data", s21);
+app.use("/scrap/data", s20);
+app.use("/scrap/data", s19);
+app.use("/scrap/data", s18);
+app.use("/scrap/data", s17);
+app.use("/scrap/data", s16);
+app.use("/scrap/data", s15);
+app.use("/scrap/data", s14);
+app.use("/scrap/data", s13);
+app.use("/scrap/data", s12);
+app.use("/scrap/data", s11);
+app.use("/scrap/data", s10);
+app.use("/scrap/data", s9);
+app.use("/scrap/data", s8);
+app.use("/scrap/data", s7);
+app.use("/scrap/data", s6);
+app.use("/scrap/data", s5);
+app.use("/scrap/data", s4);
+app.use("/scrap/data", s3);
+app.use("/scrap/data", s2);
+app.use("/scrap/data", s1);
 
 const h1Copy = require("./backend/routes/h1 copy/index");
 app.use("/rescrap/data", h1Copy);

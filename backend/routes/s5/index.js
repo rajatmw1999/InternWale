@@ -27,9 +27,10 @@ router.get("/s5", async (req, res)=> {
       UID: "barclays_5",
       Data: data,
     });
-    console.log(newData)
+    // console.log(newData)
     await newData.save();
-    
+    res.redirect('/scrap/data/s6');
+    console.log("Scrapped 5");
   });
 });
 

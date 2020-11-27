@@ -29,8 +29,9 @@ router.get("/s13", async (req, res)=> {
     });
     await newData.save();
 
-    console.log(newData)
-    
+    // console.log(newData)
+    res.redirect('/scrap/data/s14');
+    console.log("Scrapped 13");
   });
 });
 

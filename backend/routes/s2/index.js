@@ -28,7 +28,9 @@ router.get("/s2", async (req, res)=> {
       Data: data,
     });
     await newData.save();
-    console.log(newData)
+    res.redirect('/scrap/data/s3');
+    console.log("Scrapped 2");
+    // console.log(newData)
     
   });
 });

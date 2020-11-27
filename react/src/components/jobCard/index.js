@@ -2,19 +2,48 @@ import React, { Component } from "react";
 import './index.css'
 
 export default class JobCard extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      loading:true,
+      data:null
+    };
+    console.log(this.props.data);
+  }
+  
   render() {
     return (
-    <div>
+      this.props.data.map((data) => 
+      <div>
         <div class="card vanshika-jc-card">
           
           <div>
             <img id="kisspng-google-logo-g-suite-go" src="https://ph-files.imgix.net/254e5fa4-4bc9-4a8e-a552-e541a34bbb3e?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2" class="vanshika-jc-img" />
             <div class="vanshika-jc-head">
-              <p class="vanshika-jc-time">Posted 5 Hrs Ago</p>
-              <p class="vanshika-jc-company">Google</p>
-              <p class="vanshika-jc-post">Product Designer</p>
-              <p class="vanshika-jc-place">Bangalore, India</p>
-              
+             {
+               data.Data[0]
+               ?
+               <p class="vanshika-jc-time">{data.Data[0].DatePosted}</p>
+               :
+              null
+             } 
+             
+               <p class="vanshika-jc-company">{data.CompanyName}</p>
+               
+             {
+               data.Data[0]
+               ?
+               <p class="vanshika-jc-post">{data.Data[0].Title}</p>
+               :
+               <p class="vanshika-jc-post"><em>Title Not Available</em></p>
+             } 
+             {
+               data.Data[0]
+               ?
+               <p class="vanshika-jc-place">{data.Data[0].Location}</p>
+               :
+              null
+             } 
             </div>
             
           </div>
@@ -28,7 +57,7 @@ export default class JobCard extends Component {
                 <span class="vanshika-jc-labeltext">{' '}95k-105k</span>
               </div>
             </div> */}
-            <div class="col-4">
+            {/* <div class="col-4">
               <div class="vanshika-jc-experience">
                 <svg class="Icon_ionic-md-briefcase" viewBox="3.375 4.5 29.25 27">
                   <path id="Icon_ionic-md-briefcase" d="M 24.75 10.125 L 24.75 7.340624809265137 C 24.75 5.765625 23.484375 4.5 21.90937423706055 4.5 L 14.09062480926514 4.5 C 12.515625 4.5 11.25 5.765625 11.25 7.340624809265137 L 11.25 10.125 L 3.375 10.125 L 3.375 28.65937423706055 C 3.375 30.234375 4.640625 31.5 6.215624809265137 31.5 L 29.78437423706055 31.5 C 31.359375 31.5 32.625 30.234375 32.625 28.65937423706055 L 32.625 10.125 L 24.75 10.125 Z M 21.9375 10.125 L 14.0625 10.125 L 14.0625 7.3125 L 21.9375 7.3125 L 21.9375 10.125 Z">
@@ -36,7 +65,7 @@ export default class JobCard extends Component {
                 </svg>
                 <span class="vanshika-jc-labeltext">{' '}2-3 yrs</span>
               </div>
-            </div>
+            </div> */}
             <div class="col-4">
               <div id="Icon_ionic-md-time">
                 <svg class="Path_9" viewBox="3.375 3.375 29.25 29.25">
@@ -47,7 +76,24 @@ export default class JobCard extends Component {
                   <path id="Path_10" d="M 18.73125076293945 10.6875 L 16.53750038146973 10.6875 L 16.53750038146973 19.46249961853027 L 24.21562576293945 24.06796836853027 L 25.3125 22.26796913146973 L 18.73125076293945 18.36562538146973 L 18.73125076293945 10.6875 Z">
                   </path>
                 </svg>
-                <span class="vanshika-jc-fulltime vanshika-jc-labeltext">{' '}Full-Time</span>
+                {
+                  data.Data[0]
+                  ?
+                  data.Data[0].Title
+                  ?
+
+                    data.Data[0].Title.includes(' Intern ')||data.Data[0].Title.includes('Internship')
+                    ?
+                    <span class="vanshika-jc-fulltime vanshika-jc-labeltext">{' '}Internship</span>
+                    :
+                    <span class="vanshika-jc-fulltime vanshika-jc-labeltext">{' '}Full-Time</span>
+                  :
+                  null
+                  :
+                  null
+                }
+                
+                
               </div>
             </div> 
           </div>
@@ -60,14 +106,36 @@ export default class JobCard extends Component {
           </div> */}
           <div class="vanshika-jc-content">
             <ul>
-              <li>Execute all visual design stages from concept to final hand-off to developers</li>
-              <li>Conceptualize original ideas that bring simplicity and user-friendliness to complex <br/>design roadblocks</li>
+              {/* <li>Execute all visual design stages from concept to final hand-off to developers</li>
+              <li>Conceptualize original ideas that bring simplicity and user-friendliness to complex <br/>design roadblocks</li> */}
+              {
+                data.Data[0]
+                ?
+                    data.Data[0].Description
+                    ?
+                    <li>{data.Data[0].Description}</li>
+                    :
+                   <li>Job Posting by {data.CompanyName}. Check out their website for more details</li>
+                :
+                null
+              }
             </ul>
           </div>
           <div>
             <div class="vanshika-jc-submit">
               {/* <button class="btn-outline-primary btn-lg vanshika-jc-save"></button> */}
+              {
+                data.Data[0]
+                ?
+              <a href={`${data.Data[0].LinktoJobPost}`}  target="_blank">
               <button class="btn-primary btn-lg vanshika-jc-apply">Apply Now</button>
+              </a> 
+                :
+              <a href='https://google.com' target="_blank">
+              <button class="btn-primary btn-lg vanshika-jc-apply">Apply Now</button>
+              </a> 
+              }
+             
             </div>
             {/* <div className="aradhna_applicant">
               <svg class="Icon_awesome-user-tie" viewBox="0 0 31.5 36">
@@ -80,6 +148,8 @@ export default class JobCard extends Component {
           </div>
         </div>
       </div>
+      )
+    
     );
   }
 }

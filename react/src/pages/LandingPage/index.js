@@ -11,6 +11,26 @@ import Footer from '../../components/footer/index'
 import HeadCta from '../../components/headCta/index'
 
 class LandingPage extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+          loading:true,
+          data:null
+        };
+      }
+    async componentDidMount(){
+        var fetchUrl = 'http://jobskillungaserver.herokuapp.com/api/jobs/all';
+        await fetch(fetchUrl)
+        .then(res => res.json())
+        .then((data) => {
+          this.setState({
+              loading:false,
+              data:data.message
+          });
+        //   console.log(this.state.data);
+        });
+      }
+
     render() {
     return <div>
         <Home />
@@ -26,12 +46,14 @@ class LandingPage extends React.Component {
                     <FilterBox />
                 </div>
                 <div className='col-lg-8'>
-                <JobCard />
-                <JobCard />
-                <JobCard />
-                <JobCard />
-                <JobCard />
-                    <JobCard />
+                {
+                    this.state.loading?
+                    <h3>Loading</h3>
+                    :
+                    <JobCard data={this.state.data}/>
+                }
+                    
+                
                 </div>
             </div>
         </div>

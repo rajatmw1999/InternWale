@@ -29,7 +29,9 @@ router.get("/s30", async (req, res)=> {
     });
     await newData.save();
 
-    console.log(newData)
+    console.log("Scrapped 30-----------------------------------DONE---------------------------------");
+    res.send('Done');
+    // console.log(newData)
     
   });
 });

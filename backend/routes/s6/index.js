@@ -27,9 +27,10 @@ router.get("/s6", async (req, res)=> {
       UID: "citiBank_6",
       Data: data,
     });
-    console.log(newData)
+    // console.log(newData)
     await newData.save();
-
+    res.redirect('/scrap/data/s7');
+    console.log("Scrapped 6");
     
   });
 });

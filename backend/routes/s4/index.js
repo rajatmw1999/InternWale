@@ -27,8 +27,10 @@ router.get("/s4", async (req, res)=> {
       UID: "bdo_4",
       Data: data,
     });
-    console.log(newData)
+    // console.log(newData)
     await newData.save();
+    res.redirect('/scrap/data/s5');
+    console.log("Scrapped 4");
     
   });
 });

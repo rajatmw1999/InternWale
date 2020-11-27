@@ -27,9 +27,10 @@ router.get("/s7", async (req, res)=> {
       UID: "creditSuisse_7",
       Data: data,
     });
-    console.log(newData)
+    // console.log(newData)
     await newData.save();
-
+    res.redirect('/scrap/data/s8');
+    console.log("Scrapped 7");
     
   });
 });

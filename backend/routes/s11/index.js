@@ -29,8 +29,9 @@ router.get("/s11", async (req, res)=> {
     });
     await newData.save();
 
-    console.log(newData)
-    
+    // console.log(newData)
+    res.redirect('/scrap/data/s12');
+    console.log("Scrapped 11");
   });
 });
 

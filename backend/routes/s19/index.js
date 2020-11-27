@@ -28,8 +28,9 @@ router.get("/s19", async (req, res)=> {
       Data: data,
     });
     await newData.save();
-
-    console.log(newData)
+    res.redirect('/scrap/data/s20');
+    console.log("Scrapped 19");
+    // console.log(newData)
     
   });
 });

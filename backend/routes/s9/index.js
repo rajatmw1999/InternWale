@@ -29,8 +29,9 @@ router.get("/s9", async (req, res)=> {
     });
     await newData.save();
 
-    console.log(newData)
-    
+    // console.log(newData)
+    res.redirect('/scrap/data/s10');
+    console.log("Scrapped 9");
   });
 });
 
