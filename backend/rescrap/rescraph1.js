@@ -3,7 +3,7 @@ const scrapper = require("../scrappers/ThisCourse/scraper");
 const Job = require("../models/Job");
 const CompanyName = "This Course";
 const isEqual = require("./isEqual");
-
+let i = 0;
 router.get("/h23", async (req, res) => {
   let data = [];
   await scrapper().then((jobs) => {
@@ -12,7 +12,7 @@ router.get("/h23", async (req, res) => {
         Title: jobs[i].title || null,
         Category: jobs[i].category || null,
         DatePosted: jobs[i].date || null,
-        Company: jobs[i].companyName,
+        Company: jobs[i].CompanyName,
         LinktoJobPost: jobs[i].link || null,
         JobId: null,
         Description: jobs[i].desc || null,
@@ -22,16 +22,28 @@ router.get("/h23", async (req, res) => {
     }
     Job.findOne({ CompanyName }).then((storedJobs) => {
       //FETCHING JOBS BY COMPANY NAME
-      let i = 0;
       while (i < data.length) {
-        if (isEqual(data[i], storedJobs.Data[0])) break;
+        if (isEqual(storedJobs.Data[0], data[i])) break;
         // IF MATCH IS FOUND, THEN FOLLOWING OBJECTS MUST ALREADY BE IN DB
         else {
-          console.log(data[i]); // ELSE JOB IS NEW AND IS CONSOLED
+          // console.log(data[i]); // ELSE JOB IS NEW AND IS CONSOLED
           i++;
         }
       }
-      if (i === 0) console.log(`No new jobs found on ${CompanyName}`); //NO NEW JOB FOUND
+      if (i === 0) console.log(`No new jobs found on ${CompanyName}`);
+      //NO NEW JOB FOUND
+      else if (i !== 0) {
+        data.length = i;
+        Job.findOneAndUpdate(
+          { CompanyName },
+          {
+            $push: {
+              Data: { $each: data.map((newjob) => newjob), $position: 0 },
+            },
+          },
+          { useFindAndModify: false }
+        ).then(() => console.log(`Rescrapped ${CompanyName}`));
+      }
     });
   });
 });
