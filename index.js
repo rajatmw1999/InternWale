@@ -155,6 +155,9 @@ const h1Copy = require("./backend/routes/h1 copy/index");
 app.use("/rescrap/data", h1Copy);
 const h23Rescrap = require("./backend/rescrap/rescraph1");
 app.use("/rescrap/data", h23Rescrap);
+
+const h1Rescrap = require("./backend/rescrap/h1/index");
+app.use("/rescrap/data", h1Rescrap);
 const emailSend = require("./backend/api/functions/sendEmail");
 app.use("/test", emailSend);
 

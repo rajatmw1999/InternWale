@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const scrapper = require("../scrappers/ThisCourse/scraper");
-const Job = require("../models/Job");
-const CompanyName = "This Course";
-const isEqual = require("./isEqual");
+const scrapper = require("../../scrappers/kpmg scraper/scraper");
+const Job = require("../../models/Job");
+const CompanyName = "KPMG";
+const isEqual = require("../isEqual");
 
-router.get("/h23", async (req, res) => {
+router.get("/h1", async (req, res) => {
   let data = [];
   await scrapper().then((jobs) => {
     for (let i = 0; i < jobs.length && i < 20; i++) {
