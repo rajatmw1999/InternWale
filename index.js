@@ -151,8 +151,6 @@ app.use("/scrap/data", s3);
 app.use("/scrap/data", s2);
 app.use("/scrap/data", s1);
 
-const h1Copy = require("./backend/routes/h1 copy/index");
-app.use("/rescrap/data", h1Copy);
 const h23Rescrap = require("./backend/rescrap/rescraph1");
 app.use("/rescrap/data", h23Rescrap);
 

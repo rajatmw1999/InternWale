@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const scrapper = require("../../scrappers/kpmg scraper/scraper");
-const Job = require("../../models/Job");
 const CompanyName = "KPMG";
-const isEqual = require("../isEqual");
-
+const CompanyUID = "kpmg_1";
+const NewJobs = require("../NewJobs");
+let i = 0;
 router.get("/h1", async (req, res) => {
   let data = [];
   await scrapper().then((jobs) => {
@@ -12,7 +12,7 @@ router.get("/h1", async (req, res) => {
         Title: jobs[i].title || null,
         Category: jobs[i].category || null,
         DatePosted: jobs[i].date || null,
-        Company: jobs[i].companyName,
+        Company: jobs[i].CompanyName,
         LinktoJobPost: jobs[i].link || null,
         JobId: null,
         Description: jobs[i].desc || null,
@@ -20,19 +20,7 @@ router.get("/h1", async (req, res) => {
       };
       data.push(new_job);
     }
-    Job.findOne({ CompanyName }).then((storedJobs) => {
-      //FETCHING JOBS BY COMPANY NAME
-      let i = 0;
-      while (i < data.length) {
-        if (isEqual(data[i], storedJobs.Data[0])) break;
-        // IF MATCH IS FOUND, THEN FOLLOWING OBJECTS MUST ALREADY BE IN DB
-        else {
-          console.log(data[i]); // ELSE JOB IS NEW AND IS CONSOLED
-          i++;
-        }
-      }
-      if (i === 0) console.log(`No new jobs found on ${CompanyName}`); //NO NEW JOB FOUND
-    });
+    NewJobs(CompanyName, CompanyUID, data);
   });
 });
 
