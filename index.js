@@ -3,24 +3,24 @@ const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-// const URI = `mongodb+srv://user:s3oTPRp8I89vZ6qC@cluster0.r2ehn.mongodb.net/Jobs?retryWrites=true&w=majority`;
-// mongoose
-//   .connect(URI, {
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => console.log("MongoDB Connected..."))
-//   .catch((err) => console.log(err));
-mongoose.connect(
-  "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/jobsSkillUnga?retryWrites=true&w=majority",
-  {
-    //useMongoClient: true
+const URI = `mongodb+srv://user:s3oTPRp8I89vZ6qC@cluster0.r2ehn.mongodb.net/Jobs?retryWrites=true&w=majority`;
+mongoose
+  .connect(URI, {
     useNewUrlParser: true,
+    useCreateIndex: true,
     useUnifiedTopology: true,
-  },
-  console.log("Database Connected")
-);
+  })
+  .then(() => console.log("MongoDB Connected..."))
+  .catch((err) => console.log(err));
+// mongoose.connect(
+//   "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/jobsSkillUnga?retryWrites=true&w=majority",
+//   {
+//     //useMongoClient: true
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   },
+//   console.log("Database Connected")
+// );
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -151,10 +151,11 @@ app.use("/scrap/data", s3);
 app.use("/scrap/data", s2);
 app.use("/scrap/data", s1);
 
-const h1Copy = require("./backend/routes/h1 copy/index");
-app.use("/rescrap/data", h1Copy);
 const h23Rescrap = require("./backend/rescrap/rescraph1");
 app.use("/rescrap/data", h23Rescrap);
+
+const h1Rescrap = require("./backend/rescrap/h1/index");
+app.use("/rescrap/data", h1Rescrap);
 const emailSend = require("./backend/api/functions/sendEmail");
 app.use("/test", emailSend);
 

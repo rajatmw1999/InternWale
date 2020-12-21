@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const scrapper = require("../scrappers/ThisCourse/scraper");
-const CompanyName = "ThisCourse";
-const CompanyUID = "ThisCourse";
-const NewJobs = require("./NewJobs");
-router.get("/h23", async (req, res) => {
+const scrapper = require("../../scrappers/axa Finance/scraper");
+const CompanyName = "AXA";
+const CompanyUID = "axa_17";
+const NewJobs = require("../NewJobs");
+router.get("/s17", async (req, res) => {
   let data = [];
   await scrapper().then((jobs) => {
     for (let i = 0; i < jobs.length && i < 20; i++) {
