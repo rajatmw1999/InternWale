@@ -151,9 +151,6 @@ app.use("/scrap/data", s3);
 app.use("/scrap/data", s2);
 app.use("/scrap/data", s1);
 
-const h23Rescrap = require("./backend/rescrap/rescraph1");
-app.use("/rescrap/data", h23Rescrap);
-
 const h1Rescrap = require("./backend/rescrap/h1/index");
 app.use("/rescrap/data", h1Rescrap);
 const emailSend = require("./backend/api/functions/sendEmail");
