@@ -14,14 +14,6 @@ const AngelInternSchema = new mongoose.Schema({
     type: String,
     default: Date.now(),
   },
-  TotalField:{
-    type:Number,
-    required:true
-  },
-  TotalSubfield:{
-    type:Number,
-    required:true
-  },
   TotalJobs:{
     type:Number,
     required:true

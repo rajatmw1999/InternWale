@@ -1,6 +1,7 @@
 const { Number } = require("mongoose");
 const mongoose = require("mongoose");
 
+
 const HiristJobSchema = new mongoose.Schema({
    UID: {
     type: String,
@@ -13,14 +14,6 @@ const HiristJobSchema = new mongoose.Schema({
   DateScrap: {
     type: String,
     default: Date.now(),
-  },
-  TotalField:{
-    type:Number,
-    required:true
-  },
-  TotalSubfield:{
-    type:Number,
-    required:true
   },
   TotalJobs:{
     type:Number,
