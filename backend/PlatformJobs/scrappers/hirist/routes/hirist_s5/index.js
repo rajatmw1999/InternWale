@@ -1,7 +1,6 @@
 const router = require("express").Router();
-const scrapper = require("../../hiristscrapper/dataScience/scraper");
-const Job = require("../../models/Job");
-const data = [];
+const scrapper = require("../../scrappers/dataScience/scraper");
+const Job = require("../../../../models/HiristJob");
 
 router.get("/s5", async (req, res)=> {
   let data = [];
@@ -11,27 +10,35 @@ router.get("/s5", async (req, res)=> {
         Title: jobs[i].name || null,
         Category: jobs[i].category || null,
         DatePosted: jobs[i].posted || null,
-        Company: jobs[i].company,
+        CompanyName: jobs[i].company,
         LinktoJobPost: jobs[i].link || null,
         JobId: null,
-        Description: jobs[i].desc || null,
+        Description: jobs[i].description || null,
         Location: jobs[i].location || null,
+        ExpReq: jobs[i].experience || null
       };
       data.push(new_job);
     }
   })
   .then(async (ans)=>{
     const newData = await new Job({
-      CompanyName: "Hirist Data Science",
+      UID: "hirist_engineering_DataScience",
+      PlatformName: "Hirist",
       DateScrap: Date.now(),
-      UID: "hiristDataScience_5",
-      Data: data,
+      TotalJobs: data.length,
+      Data: {
+        "NameOfField":"Engineering",
+        "NameOfSubfield":"Data Science",
+        "JobsArr":data
+      },
     });
     await newData.save();
 
-    // console.log(newData)
+    // console.log(newData);
+    // console.log(newData.Data);
+
     res.redirect('/scrap/data/hirist/s6');
-    console.log("Hirist Scrapped 5");
+    console.log("Hirist Scrapper 5");
   });
 });
 
