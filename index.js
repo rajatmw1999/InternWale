@@ -3,24 +3,24 @@ const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-const URI = `mongodb+srv://user:s3oTPRp8I89vZ6qC@cluster0.r2ehn.mongodb.net/Jobs?retryWrites=true&w=majority`;
-mongoose
-  .connect(URI, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB Connected..."))
-  .catch((err) => console.log(err));
-// mongoose.connect(
-//   "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/jobsSkillUnga?retryWrites=true&w=majority",
-//   {
-//     //useMongoClient: true
+// const URI = `mongodb+srv://user:s3oTPRp8I89vZ6qC@cluster0.r2ehn.mongodb.net/Jobs?retryWrites=true&w=majority`;
+// mongoose
+//   .connect(URI, {
 //     useNewUrlParser: true,
+//     useCreateIndex: true,
 //     useUnifiedTopology: true,
-//   },
-//   console.log("Database Connected")
-// );
+//   })
+//   .then(() => console.log("MongoDB Connected..."))
+//   .catch((err) => console.log(err));
+mongoose.connect(
+  "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/jobsSkillUnga?retryWrites=true&w=majority",
+  {
+    //useMongoClient: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  console.log("Database Connected")
+);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -120,13 +120,13 @@ const s27 = require("./backend/routes/s27/index");
 const s28 = require("./backend/routes/s28/index");
 const s29 = require("./backend/routes/s29/index");
 const s30 = require("./backend/routes/s30/index");
-const hirist_s1 = require("./backend/hiristroutes/mobile/index");
-const hirist_s2 = require("./backend/hiristroutes/frontEnd/index");
-const hirist_s3 = require("./backend/hiristroutes/backEnd/index");
-const hirist_s4 = require("./backend/hiristroutes/devOps/index");
-const hirist_s5 = require("./backend/hiristroutes/dataScience/index");
-const hirist_s6 = require("./backend/hiristroutes/projectManagement/index");
-const hirist_s7 = require("./backend/hiristroutes/internships/index");
+const hirist_s1 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist_s1");
+const hirist_s2 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist_s2");
+const hirist_s3 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist_s3");
+const hirist_s4 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist_s4");
+const hirist_s5 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist_s5");
+const hirist_s6 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist_s6");
+const hirist_s7 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist_s7");
 
 app.use("/scrap/data/hirist", hirist_s7);
 app.use("/scrap/data/hirist", hirist_s6);
