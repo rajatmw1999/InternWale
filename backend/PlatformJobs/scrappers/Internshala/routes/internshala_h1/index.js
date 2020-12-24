@@ -7,11 +7,6 @@ router.get("/h1", async (req, res) => {
 
   await scrapper()
     .then((jobs) => {
-      //   console.log(jobs);
-      //   for (let i = 0; i < jobs.length && i < 20; i++) {
-      //     const new_job = jobs[i];
-      //     data.push(new_job);
-      //   }
       if (jobs.length > 20) jobs.length = 20;
       data = jobs;
     })
@@ -32,8 +27,8 @@ router.get("/h1", async (req, res) => {
       // console.log(newData);
       // console.log(newData.Data);
 
-      // res.redirect("/scrap/data/hirist/s2");
-      console.log("Internshala Scrapper 1");
+      res.redirect("/scrap/data/internshala/h2");
+      console.log("Internshala Scrapped 1");
     });
 });
 
