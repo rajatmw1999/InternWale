@@ -7,7 +7,7 @@ async function scrapper() {
   const page = await browser.newPage();
   const link = `https://internshala.com/internships/3d%20printing,aerospace,automobile%20engineering,electrical,electronics,embedded%20systems,engineering%20design,industrial%20and%20production%20engineering,internet%20of%20things%20(iot),robotics-internship`;
   let i = 1;
-  while (i <= 8) {
+  while (i <= 3) {
     await page.goto(`${link}/page-${i}`, {
       timeout: 0,
       waitUntil: "networkidle0",
