@@ -14,15 +14,15 @@ const mongoose = require("mongoose");
 //   .then(() => console.log("MongoDB Connected..."))
 //   .catch((err) => console.log(err));
 
-mongoose.connect(
-  "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/jobsSkillUnga?retryWrites=true&w=majority",
-  {
-    //useMongoClient: true
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  console.log("Database Connected")
-);
+// mongoose.connect(
+//   "mongodb+srv://admin:admin@cluster0-nbxxl.mongodb.net/jobsSkillUnga?retryWrites=true&w=majority",
+//   {
+//     //useMongoClient: true
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   },
+//   console.log("Database Connected")
+// );
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

@@ -162,6 +162,52 @@ router.post('/category/all', async(req, res, next) => {
 });
 
 
+router.get('/job/alert/:jobData', async(req, res) => {
+    const data = req.params.jobData;
+    const object = JSON.parse(data);
+    console.log(object);
+
+// NODEMAILER OPTIONS START-----------------------------------------------------------------------
+var mailOptions = {
+    from: 'SkillUnga Official <skillunga.official@gmail.com>',
+    to: "rajatis1999@gmail.com",
+    subject: "Job Alert for you!",
+    text: data
+  };
+  await transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
+  //NODEMAILER OPTIONS END--------------------------------------------------------------------------
+
+  return res.status(200).json({
+    status:200,
+    message:"Returned."
+    });
+});
+
+// router.get('/check/alert', async(req, res) => {
+//     const data = {
+//         name:'job1',
+//         company:'company1',
+//         data:[
+//             {
+//                 jobname:'jobname1',
+//                 link:'link1 '
+//             },
+//             {
+//                 jobname:'jobname2',
+//                 link:'link2'
+//             }
+//         ]
+//     };
+//     const string = JSON.stringify(data);
+//     res.redirect(`/api/email/job/alert/${string}`);
+// });
+
 router.get('/unsubscribe', async(req, res)=>{
 
 });
