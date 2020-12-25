@@ -37,7 +37,7 @@ async function scraper() {
                             jobJson.company = job.querySelector('div.job-fields span.dark_grey.align-title').innerText;
                             jobJson.experience = job.querySelector('div.job-fields span.dark_grey.col-year').innerText;
                             jobJson.posted = job.querySelector('div.job-fields span.original.dark_grey').innerText;
-                            jobJson.category="Mobile Application";
+                            jobJson.description="mobile developers may apply";
         
                             jobJson.link="https://www.hirist.com".concat(job.querySelector('div.job-title a').getAttribute('href'));
                 
