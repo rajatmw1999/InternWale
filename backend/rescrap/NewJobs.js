@@ -3,6 +3,7 @@
 // ELSE NOTHING WILL HAPPEN.
 const Job = require("../models/Job");
 const isEqual = require("./isEqual");
+const emailNewJobs = require("../api/emailNewJobs");
 
 //ARGUMENTS : CompanyName : Name of company as stored in DB (NOT IMPORTANT)
 //            UID : UID AS STORED IN DB (IMPORTANT) IF WRONG, ERROR WILL BE THROWN
@@ -24,6 +25,7 @@ function NewJobs(CompanyName, UID, data) {
     //NO NEW JOB FOUND
     else if (i !== 0) {
       data.length = i;
+
       Job.findOneAndUpdate(
         { UID },
         {
@@ -33,6 +35,7 @@ function NewJobs(CompanyName, UID, data) {
         },
         { useFindAndModify: false }
       ).then(() => console.log(`Rescrapped ${CompanyName}`));
+      emailNewJobs(data);
     }
   });
 }
