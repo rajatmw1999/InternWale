@@ -130,6 +130,13 @@ const hirist_s5 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist
 const hirist_s6 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist_s6/index");
 const hirist_s7 = require("./backend/PlatformJobs/scrappers/hirist/routes/hirist_s7/index");
 
+const internshala_s1 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_s1/index");
+const internshala_s2 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_s2/index");
+const internshala_s3 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_s3/index");
+const internshala_s4 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_s4/index");
+const internshala_s5 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_s5/index");
+const internshala_s6 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_s6/index");
+
 const internshala_h1 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_h1/index");
 const internshala_h2 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_h2/index");
 const internshala_h3 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_h3/index");
@@ -142,6 +149,13 @@ app.use("/scrap/data/internshala", internshala_h3);
 app.use("/scrap/data/internshala", internshala_h4);
 app.use("/scrap/data/internshala", internshala_h5);
 app.use("/scrap/data/internshala", internshala_h6);
+
+app.use("/scrap/data/internshala", internshala_s1);
+app.use("/scrap/data/internshala", internshala_s2);
+app.use("/scrap/data/internshala", internshala_s3);
+app.use("/scrap/data/internshala", internshala_s4);
+app.use("/scrap/data/internshala", internshala_s5);
+app.use("/scrap/data/internshala", internshala_s6);
 
 app.use("/scrap/data/hirist", hirist_s7);
 app.use("/scrap/data/hirist", hirist_s6);
