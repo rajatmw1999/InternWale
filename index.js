@@ -143,6 +143,15 @@ const internshala_h3 = require("./backend/PlatformJobs/scrappers/Internshala/rou
 const internshala_h4 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_h4/index");
 const internshala_h5 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_h5/index");
 const internshala_h6 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_h6/index");
+
+const naukri_s1=require("./backend/PlatformJobs/scrappers/naukri/routes/naukri_s1/index");
+
+const shine_s1=require("./backend/PlatformJobs/scrappers/shine/routes/shine_s1/index");
+
+app.use("/scrap/data/naukri",naukri_s1);
+
+app.use("/scrap/data/shine",shine_s1);
+
 app.use("/scrap/data/internshala", internshala_h1);
 app.use("/scrap/data/internshala", internshala_h2);
 app.use("/scrap/data/internshala", internshala_h3);
