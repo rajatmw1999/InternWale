@@ -205,7 +205,7 @@ var mailOptions = {
 //         ]
 //     };
 //     const string = JSON.stringify(data);
-//     res.redirect(`/api/email/job/alert/${string}`);
+//     return res.redirect(`/api/email/job/alert/${string}`);
 // });
 
 router.get('/unsubscribe', async(req, res)=>{
