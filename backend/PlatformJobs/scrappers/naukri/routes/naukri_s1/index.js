@@ -28,6 +28,8 @@ router.get("/s1", async (req, res) => {
       // console.log(newData.Data);
 
       console.log("Naukri Scrapped 1");
+      console.log(`Naukri Scrapping Completed !`);
+
     });
 });
 

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const scrapper = require("../../scrappers/mobile/scraper");
+const scrapper = require("../../scrappers/internships/scraper");
 const Job = require("../../../../models/HiristIntern");
 
 router.get("/s7", async (req, res)=> {
@@ -39,6 +39,8 @@ router.get("/s7", async (req, res)=> {
 
     // res.redirect('/scrap/data/hirist/s2');
     console.log("Hirist Scrapper 7");
+    console.log(`Hirist Scrapping Completed !`);
+
   });
 });
 
