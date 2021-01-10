@@ -28,6 +28,8 @@ router.get("/s1", async (req, res) => {
     //   console.log(newData.Data);
 
       console.log("Shine Scrapped 1");
+      console.log(`Shine Scrapping Completed !`);
+
     });
 });
 

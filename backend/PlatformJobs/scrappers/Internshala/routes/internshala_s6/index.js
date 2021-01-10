@@ -29,6 +29,8 @@ router.get("/s6", async (req, res) => {
 
     //   res.redirect("/scrap/data/internshala/s6");
       console.log("Internshala Scrapped 6");
+      console.log(`Internshala Scrapping Completed !`);
+
     });
 });
 
