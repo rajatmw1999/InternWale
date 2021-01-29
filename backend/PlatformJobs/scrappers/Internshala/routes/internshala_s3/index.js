@@ -7,7 +7,7 @@ router.get("/s3", async (req, res) => {
 
   await scrapper()
     .then((jobs) => {
-      if (jobs.length > 20) jobs.length = 20;
+      if (jobs.length > 200) jobs.length = 200;
       data = jobs;
     })
     .then(async (ans) => {
@@ -22,6 +22,8 @@ router.get("/s3", async (req, res) => {
           JobsArr: data,
         },
       });
+      Job.collection.deleteMany({"UID": "internshala_content_contentWriting"});
+
       await newData.save();
 
       // console.log(newData);

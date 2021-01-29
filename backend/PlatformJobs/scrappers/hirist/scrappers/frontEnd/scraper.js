@@ -60,15 +60,15 @@ async function scraper() {
           await page.goto('https://www.hirist.com/c/filter/frontend-developer-jobs-in-any%20location-2-0-1-0-1.html?ref=topnavigation',{waitUntil:"networkidle2"});
         
         
-            // await autoScroll(page);
+            await autoScroll(page);
         
           let jobs=await extractJobs()
         
-        //   console.log(jobs)
-        //   console.log(jobs.length);
+          // console.log(jobs)
+          // console.log(jobs.length);
           await browser.close();
         
            return jobs;
 }
-
+// scraper();
 module.exports= scraper;

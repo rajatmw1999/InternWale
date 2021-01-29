@@ -7,7 +7,7 @@ router.get(`/h${i}`, async (req, res) => {
 
   await scrapper()
     .then((jobs) => {
-      if (jobs.length > 20) jobs.length = 20;
+      if (jobs.length > 200) jobs.length = 200;
       data = jobs;
     })
     .then(async (ans) => {
@@ -22,8 +22,9 @@ router.get(`/h${i}`, async (req, res) => {
           JobsArr: data,
         },
       });
+      Job.collection.deleteMany({"UID": "internshala_engineering_others"});
+
       await newData.save();
-      //   res.redirect(`/scrap/data/internshala/h${i + 1}`);
       console.log(`Internshala Scrapped ${i}`);
       console.log(`Internshala Scrapping Completed !`);
     });

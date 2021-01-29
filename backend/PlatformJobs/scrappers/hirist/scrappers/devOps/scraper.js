@@ -64,11 +64,11 @@ async function scraper() {
         
           let jobs=await extractJobs()
         
-        //   console.log(jobs)
-        //   console.log(jobs.length);
+          // console.log(jobs)
+          // console.log(jobs.length);
           await browser.close();
         
            return jobs;
 }
-
+// scraper();
 module.exports= scraper;
