@@ -55,5 +55,5 @@ async function scrapperHelp(page, i) {
   });
   return data;
 }
-// scrapper().then((res) => console.log(res));
+// scrapper().then((res) => console.log(res.length));
 module.exports = scrapper;

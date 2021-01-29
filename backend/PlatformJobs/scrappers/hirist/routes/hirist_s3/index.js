@@ -5,7 +5,7 @@ const Job = require("../../../../models/HiristJob");
 router.get("/s3", async (req, res)=> {
   let data = [];
   await scrapper().then((jobs) => {
-    for(let i = 0; i < jobs.length && i < 20; i++) {
+    for(let i = 0; i < jobs.length ; i++) {
       const new_job = {
         Title: jobs[i].name || null,
         Category: jobs[i].category || null,
@@ -32,6 +32,8 @@ router.get("/s3", async (req, res)=> {
         "JobsArr":data
       },
     });
+    Job.collection.deleteMany({"UID":"hirist_engineering_Backend"});
+
     await newData.save();
 
     // console.log(newData);
