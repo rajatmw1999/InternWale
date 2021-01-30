@@ -105,9 +105,15 @@ router.post("/all/keyword", async (req, res) => {
     jobs
   );
 
-  return res.status(200).json({
-    jobs,
-  });
+  if (jobs.length > 0) {
+    return res.status(200).json({
+      message: "Jobs Found",
+      jobs,
+    });
+  } else
+    return res.status(404).json({
+      message: "No jobs founds :(",
+    });
 });
 
 module.exports = router;

@@ -42,7 +42,12 @@ const jobsRoute = require("./backend/api/jobs");
 const emailSendRoute = require("./backend/api/functions/sendEmail");
 
 app.use("/api/email", emailRoute);
+
+//TO GET JOBS OF TOP 50 COMPANIES
+//GET : req.params.CompanyName
+//URL :  localhost:3000/api/jobs/company/:CompanyName
 app.use("/api/jobs", jobsRoute);
+
 app.use("/api/email", emailSendRoute);
 
 const h1 = require("./backend/routes/h1/index");
@@ -171,13 +176,14 @@ const internshalaMobileDevelopmentapi = require("./backend/PlatformJobs/api/inte
 const internshalaOthersapi = require("./backend/PlatformJobs/api/internshala/Others/router");
 const internshalaWebDevelopmentapi = require("./backend/PlatformJobs/api/internshala/webDevelopment/router");
 
+//GET JOBS OF FREE PLATFORMS BASED ON KEYWORD
+//POST : req.body.keyword
+//URL :  localhost:3000/data/api/all/keyword
 const freeplatformKeyword = require("./backend/PlatformJobs/api/jobs find by keyword/jobsbykeyword");
 app.use("/data/api", freeplatformKeyword);
 
 app.use("/data/api", shineapi);
-
 app.use("/data/api", naukriapi);
-
 app.use("/data/api", hiristBackendapi);
 app.use("/data/api", hiristDataScienceapi);
 app.use("/data/api", hiristDevOpsapi);
