@@ -144,63 +144,64 @@ const internshala_h4 = require("./backend/PlatformJobs/scrappers/Internshala/rou
 const internshala_h5 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_h5/index");
 const internshala_h6 = require("./backend/PlatformJobs/scrappers/Internshala/routes/internshala_h6/index");
 
-const naukri_s1=require("./backend/PlatformJobs/scrappers/naukri/routes/naukri_s1/index");
+const naukri_s1 = require("./backend/PlatformJobs/scrappers/naukri/routes/naukri_s1/index");
 
-const shine_s1=require("./backend/PlatformJobs/scrappers/shine/routes/shine_s1/index");
+const shine_s1 = require("./backend/PlatformJobs/scrappers/shine/routes/shine_s1/index");
 
-const shineapi= require("./backend/PlatformJobs/api/shine/router");
-const naukriapi= require("./backend/PlatformJobs/api/naukri/router");
-const hiristBackendapi=require("./backend/PlatformJobs/api/hirist/backend/router");
-const hiristFrontendapi=require("./backend/PlatformJobs/api/hirist/frontend/router");
-const hiristDataScienceapi=require("./backend/PlatformJobs/api/hirist/dataScience/router");
-const hiristDevOpsapi=require("./backend/PlatformJobs/api/hirist/devOps/router");
-const hiristInternshipapi=require("./backend/PlatformJobs/api/hirist/internships/router");
-const hiristMobileapi=require("./backend/PlatformJobs/api/hirist/mobile/router");
-const hiristProjectManagementapi=require("./backend/PlatformJobs/api/hirist/projectManagement/router");
+const shineapi = require("./backend/PlatformJobs/api/shine/router");
+const naukriapi = require("./backend/PlatformJobs/api/naukri/router");
+const hiristBackendapi = require("./backend/PlatformJobs/api/hirist/backend/router");
+const hiristFrontendapi = require("./backend/PlatformJobs/api/hirist/frontend/router");
+const hiristDataScienceapi = require("./backend/PlatformJobs/api/hirist/dataScience/router");
+const hiristDevOpsapi = require("./backend/PlatformJobs/api/hirist/devOps/router");
+const hiristInternshipapi = require("./backend/PlatformJobs/api/hirist/internships/router");
+const hiristMobileapi = require("./backend/PlatformJobs/api/hirist/mobile/router");
+const hiristProjectManagementapi = require("./backend/PlatformJobs/api/hirist/projectManagement/router");
 
-const internshalaAccountsAndFinanceapi=require("./backend/PlatformJobs/api/internshala/AccountsAndFinance/router");
-const internshalaContentWritingapi=require("./backend/PlatformJobs/api/internshala/ContentWriting/router");
-const internshalaDataAndMachineLearningapi=require("./backend/PlatformJobs/api/internshala/DataAndMachineLearning/router");
-const internshalaGraphicsAndAnimationapi=require("./backend/PlatformJobs/api/internshala/GraphicsAndAnimation/router");
-const internshalaHardwareAndIndustryapi=require("./backend/PlatformJobs/api/internshala/HardwareAndIndustry/router");
-const internshalaHRapi=require("./backend/PlatformJobs/api/internshala/Hr/router");
-const internshalaLawAndLegalapi=require("./backend/PlatformJobs/api/internshala/LawAndLegal/router");
-const internshalaMarketingapi=require("./backend/PlatformJobs/api/internshala/Marketing/router");
-const internshalaMechEngineeringapi=require("./backend/PlatformJobs/api/internshala/MechEngineering/router");
-const internshalaMobileDevelopmentapi=require("./backend/PlatformJobs/api/internshala/MobileAppDevelopment/router");
-const internshalaOthersapi=require("./backend/PlatformJobs/api/internshala/Others/router");
-const internshalaWebDevelopmentapi=require("./backend/PlatformJobs/api/internshala/webDevelopment/router");
+const internshalaAccountsAndFinanceapi = require("./backend/PlatformJobs/api/internshala/AccountsAndFinance/router");
+const internshalaContentWritingapi = require("./backend/PlatformJobs/api/internshala/ContentWriting/router");
+const internshalaDataAndMachineLearningapi = require("./backend/PlatformJobs/api/internshala/DataAndMachineLearning/router");
+const internshalaGraphicsAndAnimationapi = require("./backend/PlatformJobs/api/internshala/GraphicsAndAnimation/router");
+const internshalaHardwareAndIndustryapi = require("./backend/PlatformJobs/api/internshala/HardwareAndIndustry/router");
+const internshalaHRapi = require("./backend/PlatformJobs/api/internshala/Hr/router");
+const internshalaLawAndLegalapi = require("./backend/PlatformJobs/api/internshala/LawAndLegal/router");
+const internshalaMarketingapi = require("./backend/PlatformJobs/api/internshala/Marketing/router");
+const internshalaMechEngineeringapi = require("./backend/PlatformJobs/api/internshala/MechEngineering/router");
+const internshalaMobileDevelopmentapi = require("./backend/PlatformJobs/api/internshala/MobileAppDevelopment/router");
+const internshalaOthersapi = require("./backend/PlatformJobs/api/internshala/Others/router");
+const internshalaWebDevelopmentapi = require("./backend/PlatformJobs/api/internshala/webDevelopment/router");
 
+const freeplatformKeyword = require("./backend/PlatformJobs/api/jobs find by keyword/jobsbykeyword");
+app.use("/data/api", freeplatformKeyword);
 
-app.use("/data/api",shineapi);
+app.use("/data/api", shineapi);
 
-app.use("/data/api",naukriapi);
+app.use("/data/api", naukriapi);
 
-app.use("/data/api",hiristBackendapi);
-app.use("/data/api",hiristDataScienceapi);
-app.use("/data/api",hiristDevOpsapi);
-app.use("/data/api",hiristFrontendapi);
-app.use("/data/api",hiristInternshipapi);
-app.use("/data/api",hiristMobileapi);
-app.use("/data/api",hiristProjectManagementapi);
+app.use("/data/api", hiristBackendapi);
+app.use("/data/api", hiristDataScienceapi);
+app.use("/data/api", hiristDevOpsapi);
+app.use("/data/api", hiristFrontendapi);
+app.use("/data/api", hiristInternshipapi);
+app.use("/data/api", hiristMobileapi);
+app.use("/data/api", hiristProjectManagementapi);
 
-app.use("/data/api",internshalaAccountsAndFinanceapi)
-app.use("/data/api",internshalaContentWritingapi)
-app.use("/data/api",internshalaDataAndMachineLearningapi)
-app.use("/data/api",internshalaGraphicsAndAnimationapi)
-app.use("/data/api",internshalaHRapi)
-app.use("/data/api",internshalaHardwareAndIndustryapi)
-app.use("/data/api",internshalaLawAndLegalapi)
-app.use("/data/api",internshalaMarketingapi)
-app.use("/data/api",internshalaMechEngineeringapi)
-app.use("/data/api",internshalaMobileDevelopmentapi)
-app.use("/data/api",internshalaOthersapi)
-app.use("/data/api",internshalaWebDevelopmentapi)
+app.use("/data/api", internshalaAccountsAndFinanceapi);
+app.use("/data/api", internshalaContentWritingapi);
+app.use("/data/api", internshalaDataAndMachineLearningapi);
+app.use("/data/api", internshalaGraphicsAndAnimationapi);
+app.use("/data/api", internshalaHRapi);
+app.use("/data/api", internshalaHardwareAndIndustryapi);
+app.use("/data/api", internshalaLawAndLegalapi);
+app.use("/data/api", internshalaMarketingapi);
+app.use("/data/api", internshalaMechEngineeringapi);
+app.use("/data/api", internshalaMobileDevelopmentapi);
+app.use("/data/api", internshalaOthersapi);
+app.use("/data/api", internshalaWebDevelopmentapi);
 
+app.use("/scrap/data/naukri", naukri_s1);
 
-app.use("/scrap/data/naukri",naukri_s1);
-
-app.use("/scrap/data/shine",shine_s1);
+app.use("/scrap/data/shine", shine_s1);
 
 app.use("/scrap/data/internshala", internshala_h1);
 app.use("/scrap/data/internshala", internshala_h2);
